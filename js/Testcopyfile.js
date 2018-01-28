@@ -489,6 +489,8 @@ var verifyNoRight = $("input[type='checkbox'][id='verify-no-right']");
 verifyNoLeft.change(function(){
     if($(this).is(":checked")){
         $(this).parent().removeClass('checkbox-checked-bg');
+        $(verifyYesLeft).prop('checked', false);
+        $(verifyYesLeft).parent().addClass('checkbox-checked-bg');
     }else {
         $(this).parent().addClass('checkbox-checked-bg');
     }
@@ -496,6 +498,8 @@ verifyNoLeft.change(function(){
 verifyYesLeft.change(function(){
     if($(this).is(":checked")){
         $(this).parent().removeClass('checkbox-checked-bg');
+        $(verifyNoLeft).prop('checked', false);
+        $(verifyNoLeft).parent().addClass('checkbox-checked-bg');
     }else {
         $(this).parent().addClass('checkbox-checked-bg');
     }
@@ -504,6 +508,8 @@ verifyYesLeft.change(function(){
 verifyNoMiddle.change(function(){
     if($(this).is(":checked")){
         $(this).parent().removeClass('checkbox-checked-bg');
+        $(verifyYesMiddle).prop('checked', false);
+        $(verifyYesMiddle).parent().addClass('checkbox-checked-bg');
     }else {
         $(this).parent().addClass('checkbox-checked-bg');
     }
@@ -511,6 +517,8 @@ verifyNoMiddle.change(function(){
 verifyYesMiddle.change(function(){
     if($(this).is(":checked")){
         $(this).parent().removeClass('checkbox-checked-bg');
+        $(verifyNoMiddle).prop('checked', false);
+        $(verifyNoMiddle).parent().addClass('checkbox-checked-bg');
     }else {
         $(this).parent().addClass('checkbox-checked-bg');
     }
@@ -519,6 +527,8 @@ verifyYesMiddle.change(function(){
 verifyNoRight.change(function(){
     if($(this).is(":checked")){
         $(this).parent().removeClass('checkbox-checked-bg');
+        $(verifyYesRight).prop('checked', false);
+        $(verifyYesRight).parent().addClass('checkbox-checked-bg');
     }else {
         $(this).parent().addClass('checkbox-checked-bg');
     }
@@ -526,6 +536,8 @@ verifyNoRight.change(function(){
 verifyYesRight.change(function(){
     if($(this).is(":checked")){
         $(this).parent().removeClass('checkbox-checked-bg');
+        $(verifyNoRight).prop('checked', false);
+        $(verifyNoRight).parent().addClass('checkbox-checked-bg');
     }else {
         $(this).parent().addClass('checkbox-checked-bg');
     }

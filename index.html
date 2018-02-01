@@ -19,533 +19,534 @@
 	<![endif]-->
 </head>
 <body>
-<section class="section">
-    <div class="container is-fluid">
-        <div class="notification">
-            <div class="columns is-centered">
-                <div class="column">
-                    <div class="column_for_width">
-                        <section class="hero is-primary" id="main-banner">
-                            <div class="hero-body">
-                                <div class="container">
-                                	<h1 class="title" id="banner-title">
-                                	    SoFi Sidebar
-                                	</h1>
-                                </div>
-                    	    </div>
-                    	</section>
-                    	<div class="contact-type-tabs">
-                    	    <button id="default-tab" class="main-tablinks" onClick="openContactType(event, 'inbound')">Incoming</button>
-                    	    <button class="main-tablinks" onClick="openContactType(event, 'outbound')">Outbound</button>
-                    	    <button class="main-tablinks" onClick="openContactType(event, 'chat')">Chat</button>
-                    	</div>
-                    	
-                    	
-                    	
-                    	
-                    	
-                    	<!--
-                        *************
-                        INBOUND PAGE 
-                        *************
-                        -->
-                    	<div id="inbound" class="contact-type-tabcontent">
-                        	<div class="control container textboxes">
-                                <input class="input clear-form-all clear-form-inbound" type="text" placeholder="First Name"> 
-                            </div>
-                            <div class="control container textboxes">
-                                <input class="input clear-form-all clear-form-inbound" type="text" placeholder="Last Name">
-                            </div>
-                            <div class="control container textboxes">
-                                <input class="input clear-form-all clear-form-inbound" type="text" placeholder="Email Address">
-                            </div>
-                            <div class="control container textboxes">
-                                <input id="calledFromNumber" class="input clear-form-all clear-form-inbound" type="text" placeholder="Phone Number">
-                            </div>
-                            <div class="container textboxes">
-                                <input class="checkbox verify-checkbox-input-inbound" type="checkbox" name="phoneonfile-checkbox" value="phoneonfile-checkbox" id="phone-on-file-checkbox-inbound" />
-                                <label class="checkbox" for="phoneonfile-checkbox">Calling from phone # on file?</label>
-                            </div>
-                            <div class="container">
-                                <h2 class="title is-4">Verification List:</h2>
-                            </div>
-                            <div class="container verify-checkbox" id="verify-phone-div">
-                                <input type="checkbox" class="checkbox verify-checkbox-input-inbound" value="verify-phone-checkbox" id="verify-phone-checkbox-inbound" name="verify-phone-checkbox" />
-                                <label for="verify-phone-checkbox">Phone Number</label>
-                            </div>
-                            <div class="container verify-checkbox" id="verify-address-div">
-                                <input type="checkbox" class="checkbox verify-checkbox-input-inbound" id="verify-address-checkbox-inbound" name="verify-address-checkbox" />
-                                <label for="verify-address-checkbox">Address</label>
-                            </div>
-                            <div class="container verify-checkbox" id="verify-dob-div">
-                                <input type="checkbox" class="checkbox verify-checkbox-input-inbound" id="verify-dob-checkbox-inbound" name="verify-dob-checkbox" />
-                                <label for="verify-dob-checkbox">DOB</label>
-                            </div>
-                            <div class="container verify-checkbox" id="verify-ssn-div">
-                                <input type="checkbox" class="checkbox verify-checkbox-input-inbound" id="verify-ssn-checkbox-inbound" name="verify-ssn-checkbox" />
-                                <label for="verify-ssn-checkbox">SSN</label>
-                            </div>
-                            <div class="container notes-container">
-                                <textarea rows="10" cols="35" id="notes-inbound" class="clear-form-all clear-form-inbound boxsizingBorder" placeholder="Notes..."></textarea>
-                            </div>
-                            <div class="container contact-ddl">
-                                <label for="contact-type-ddl" datalabel="contact-type-ddl">Contact Type:</label>    
-                                    <select id="contact-type-ddl" class="ddl-inbound">
-                                        <option value="ICC">ICC - Inbound Customer Comm</option>
-                                        <option value="IEV">IEV - Inbound Employment Verify</option>
-                                    </select>
-                            </div>
-                            <div class="field is-grouped container button-container">
-                                <button class="button is-primary copyBtn" id="copyBtnInbound" value="Copy" onClick="copyToClipboardInbound()">Copy</button>
-                                <button class="button is-warning" id="resetInbound" value="Reset" onClick="clearInboundForm()">Reset</button>
-                            </div>
-                            <textarea rows="10" cols="50" id="formated-copy-textarea-inbound" class="clear-form" style="position:absolute; left:-1000px; top:-1000px;"></textarea>
-                        </div>
-                        
-                        
-                        
-                        
-                        
-                        <!--
-                        *************
-                        OUTBOUND PAGE 
-                        *************
-                        -->
-                        <div id="outbound" class="contact-type-tabcontent">
-                            <div class="container">
-                                <h2 class="title is-3">Verified?</h2>
-                            </div>
-                            <div class="container verify-yes-checkbox checkbox-checked-bg" id="verify-address-div">
-                                <input type="checkbox" class="checkbox outbound-checkbox-input" id="verify-yes" name="verify-yes-checkbox" />
-                                <label for="verify-address-checkbox">Yes</label>
-                            </div>
-                            <div class="container verify-checkbox checkbox-checked-bg" id="verify-address-div">
-                                <input type="checkbox" class="checkbox outbound-checkbox-input" id="verify-no" name="verify-no-checkbox" />
-                                <label for="verify-address-checkbox">No</label>
-                            </div>
-                            <div class="container" id="outbound-phone-title">
-                                <h2 class="title is-5">Phone Number Called</h2>
-                            </div>
-                            <div class="control container textboxes">
-                                <input id="number-called-outbound" class="input clear-form-all clear-form-outbound" type="text" placeholder="Phone Number Called">
-                            </div>
-                            <div class="container">
-                                <h2 class="title is-3">Pre-Made Templates</h2>
-                            </div>
-                            <!--
-                            ***************
-                            Accordion Start
-                            ***************
+    <iframe src="https://www.upworthy.com/"></iframe>
+    <section class="section">
+        <div class="container is-fluid">
+            <div class="notification">
+                <div class="columns is-centered">
+                    <div class="column">
+                        <div class="column_for_width">
+                            <section class="hero is-primary" id="main-banner">
+                                <div class="hero-body">
+                                    <div class="container">
+                                    	<h1 class="title" id="banner-title">
+                                    	    SoFi Sidebar
+                                    	</h1>
+                                    </div>
+                        	    </div>
+                        	</section>
+                        	<div class="contact-type-tabs">
+                        	    <button id="default-tab" class="main-tablinks" onClick="openContactType(event, 'inbound')">Incoming</button>
+                        	    <button class="main-tablinks" onClick="openContactType(event, 'outbound')">Outbound</button>
+                        	    <button class="main-tablinks" onClick="openContactType(event, 'chat')">Chat</button>
+                        	</div>
+                        	
+                        	
+                        	
+                        	
+                        	
+                        	<!--
+                            *************
+                            INBOUND PAGE 
+                            *************
                             -->
-                            <div class="accordion">
-                                <!-- Accordion for Prefunding Templates -->
-                                <div class="accordion-section">
-                                    <a class="accordion-section-title" href="#prefunding-templates">
-                                        <h2 class="title is-5">Pre-funding Templates</h2>
-                                    </a>
-                                    <div id="prefunding-templates" class="accordion-section-content">
-                                        <!-- Accordion for Prefunding Templates -->
-                                        <div class="prefund-accordion">
-                                            <div class="prefund-accordion-section">
+                        	<div id="inbound" class="contact-type-tabcontent">
+                            	<div class="control container textboxes">
+                                    <input class="input clear-form-all clear-form-inbound" type="text" placeholder="First Name"> 
+                                </div>
+                                <div class="control container textboxes">
+                                    <input class="input clear-form-all clear-form-inbound" type="text" placeholder="Last Name">
+                                </div>
+                                <div class="control container textboxes">
+                                    <input class="input clear-form-all clear-form-inbound" type="text" placeholder="Email Address">
+                                </div>
+                                <div class="control container textboxes">
+                                    <input id="calledFromNumber" class="input clear-form-all clear-form-inbound" type="text" placeholder="Phone Number">
+                                </div>
+                                <div class="container textboxes">
+                                    <input class="checkbox verify-checkbox-input-inbound" type="checkbox" name="phoneonfile-checkbox" value="phoneonfile-checkbox" id="phone-on-file-checkbox-inbound" />
+                                    <label class="checkbox" for="phoneonfile-checkbox">Calling from phone # on file?</label>
+                                </div>
+                                <div class="container">
+                                    <h2 class="title is-4">Verification List:</h2>
+                                </div>
+                                <div class="container verify-checkbox" id="verify-phone-div">
+                                    <input type="checkbox" class="checkbox verify-checkbox-input-inbound" value="verify-phone-checkbox" id="verify-phone-checkbox-inbound" name="verify-phone-checkbox" />
+                                    <label for="verify-phone-checkbox">Phone Number</label>
+                                </div>
+                                <div class="container verify-checkbox" id="verify-address-div">
+                                    <input type="checkbox" class="checkbox verify-checkbox-input-inbound" id="verify-address-checkbox-inbound" name="verify-address-checkbox" />
+                                    <label for="verify-address-checkbox">Address</label>
+                                </div>
+                                <div class="container verify-checkbox" id="verify-dob-div">
+                                    <input type="checkbox" class="checkbox verify-checkbox-input-inbound" id="verify-dob-checkbox-inbound" name="verify-dob-checkbox" />
+                                    <label for="verify-dob-checkbox">DOB</label>
+                                </div>
+                                <div class="container verify-checkbox" id="verify-ssn-div">
+                                    <input type="checkbox" class="checkbox verify-checkbox-input-inbound" id="verify-ssn-checkbox-inbound" name="verify-ssn-checkbox" />
+                                    <label for="verify-ssn-checkbox">SSN</label>
+                                </div>
+                                <div class="container notes-container">
+                                    <textarea rows="10" cols="35" id="notes-inbound" class="clear-form-all clear-form-inbound boxsizingBorder" placeholder="Notes..."></textarea>
+                                </div>
+                                <div class="container contact-ddl">
+                                    <label for="contact-type-ddl" datalabel="contact-type-ddl">Contact Type:</label>    
+                                        <select id="contact-type-ddl" class="ddl-inbound">
+                                            <option value="ICC">ICC - Inbound Customer Comm</option>
+                                            <option value="IEV">IEV - Inbound Employment Verify</option>
+                                        </select>
+                                </div>
+                                <div class="field is-grouped container button-container">
+                                    <button class="button is-primary copyBtn" id="copyBtnInbound" value="Copy" onClick="copyToClipboardInbound()">Copy</button>
+                                    <button class="button is-warning" id="resetInbound" value="Reset" onClick="clearInboundForm()">Reset</button>
+                                </div>
+                                <textarea rows="10" cols="50" id="formated-copy-textarea-inbound" class="clear-form" style="position:absolute; left:-1000px; top:-1000px;"></textarea>
+                            </div>
+                            
+                            
+                            
+                            
+                            
+                            <!--
+                            *************
+                            OUTBOUND PAGE 
+                            *************
+                            -->
+                            <div id="outbound" class="contact-type-tabcontent">
+                                <div class="container">
+                                    <h2 class="title is-3">Verified?</h2>
+                                </div>
+                                <div class="container verify-yes-checkbox checkbox-checked-bg" id="verify-address-div">
+                                    <input type="checkbox" class="checkbox outbound-checkbox-input" id="verify-yes" name="verify-yes-checkbox" />
+                                    <label for="verify-address-checkbox">Yes</label>
+                                </div>
+                                <div class="container verify-checkbox checkbox-checked-bg" id="verify-address-div">
+                                    <input type="checkbox" class="checkbox outbound-checkbox-input" id="verify-no" name="verify-no-checkbox" />
+                                    <label for="verify-address-checkbox">No</label>
+                                </div>
+                                <div class="container" id="outbound-phone-title">
+                                    <h2 class="title is-5">Phone Number Called</h2>
+                                </div>
+                                <div class="control container textboxes">
+                                    <input id="number-called-outbound" class="input clear-form-all clear-form-outbound" type="text" placeholder="Phone Number Called">
+                                </div>
+                                <div class="container">
+                                    <h2 class="title is-3">Pre-Made Templates</h2>
+                                </div>
+                                <!--
+                                ***************
+                                Accordion Start
+                                ***************
+                                -->
+                                <div class="accordion">
+                                    <!-- Accordion for Prefunding Templates -->
+                                    <div class="accordion-section">
+                                        <a class="accordion-section-title" href="#prefunding-templates">
+                                            <h2 class="title is-5">Pre-funding Templates</h2>
+                                        </a>
+                                        <div id="prefunding-templates" class="accordion-section-content">
+                                            <!-- Accordion for Prefunding Templates -->
+                                            <div class="prefund-accordion">
                                                 <div class="prefund-accordion-section">
-                                                    <a class="prefund-accordion-section-title" href="#prefunding-template">
-                                                        <h2 class="title is-5">Pre-funding Complete</h2>
-                                                    </a>
-                                                </div>
-                                                <div id="prefunding-template" class="prefund-accordion-section-content">
-                                                    <div class="acc-panel field column">
-                                                        <h3 class="title is-6">Is there an additional ACH amount?</h3>
-                                                        <div class="container" id="extra-ach-yes">
-                                                            <input type="checkbox" class="checkbox outbound-checkbox-input" id="extra-ach-yes" name="extra-ach-yes" />
-                                                            <label for="extra-ach-yes">Yes</label>
+                                                    <div class="prefund-accordion-section">
+                                                        <a class="prefund-accordion-section-title" href="#prefunding-template">
+                                                            <h2 class="title is-5">Pre-funding Complete</h2>
+                                                        </a>
+                                                    </div>
+                                                    <div id="prefunding-template" class="prefund-accordion-section-content">
+                                                        <div class="acc-panel field column">
+                                                            <h3 class="title is-6">Is there an additional ACH amount?</h3>
+                                                            <div class="container" id="extra-ach-yes">
+                                                                <input type="checkbox" class="checkbox outbound-checkbox-input" id="extra-ach-yes" name="extra-ach-yes" />
+                                                                <label for="extra-ach-yes">Yes</label>
+                                                            </div>
+                                                            <div class="control container textboxes" id="extra-ach-amount-container">
+                                                                <input id="extra-ach-amount" class="input clear-form-all clear-form-outbound" type="text" placeholder="Amount of extra ACH">
+                                                            </div>
+                                                            <button class="button" id="" value="" onClick="chooseTemplate('prefund', 'complete')">Pre-Funding Complete</button>
                                                         </div>
-                                                        <div class="control container textboxes" id="extra-ach-amount-container">
-                                                            <input id="extra-ach-amount" class="input clear-form-all clear-form-outbound" type="text" placeholder="Amount of extra ACH">
-                                                        </div>
-                                                        <button class="button" id="" value="" onClick="chooseTemplate('prefund', 'complete')">Pre-Funding Complete</button>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!-- End of Prefunding Button accordion section -->
-                                        <div class="acc-panel field column">
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('prefund', 'not-avail')">Borrower Not Available</button>
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('prefund', 'sys-vm')">System Left Voicemail</button>
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('prefund', 'agent-vm')">Agent Left Voicemail</button>
+                                            <!-- End of Prefunding Button accordion section -->
+                                            <div class="acc-panel field column">
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('prefund', 'not-avail')">Borrower Not Available</button>
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('prefund', 'sys-vm')">System Left Voicemail</button>
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('prefund', 'agent-vm')">Agent Left Voicemail</button>
+                                            </div>
                                         </div>
                                     </div>
+                                    <!-- End of Prefunding Template accordion section -->
+                                    <!--
+                                    *************
+                                    http://inspirationalpixels.com/tutorials/creating-an-accordion-with-html-css-jquery 
+                                    *************
+                                    -->
+                                    <!-- Accordion for Signing Templates -->
+                                    <div class="accordion-section">
+                                        <a class="accordion-section-title" href="#signing-templates">
+                                            <h2 class="title is-5">Signing Templates</h2>
+                                        </a>
+                                        <div id="signing-templates" class="accordion-section-content">
+                                            <div class="acc-panel field column">
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('signing', 'complete')">Signing Call Complete</button>
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('signing', 'thinking')">Borrower Still Thinking</button>
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('signing', 'no-verify')">Didn't Want To Verify</button>
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('signing', 'not-avail')">Borrower Not Available</button>
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('signing', 'sys-vm')">System Left Voicemail</button>
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('signing', 'agent-vm')">Agent Left Voicemail</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of Signing Template accordion section -->
+                                    
+                                    <!-- Accordion for Missing Docs Templates -->
+                                    <div class="accordion-section">
+                                        <a class="accordion-section-title" href="#missing-docs-templates">
+                                            <h2 class="title is-5">Missing Docs Templates</h2>
+                                        </a>
+                                        <div id="missing-docs-templates" class="accordion-section-content">
+                                            <div class="acc-panel field column">
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('miss-doc', 'complete')">Missing Docs Complete</button>
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('miss-doc', 'no-verify')">Didn't Want To Verify</button>
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('miss-doc', 'not-avail')">Borrower Not Available</button>
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('miss-doc', 'sys-vm')">System Left Voicemail</button>
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('miss-doc', 'agent-vm')">Agent Left Voicemail</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of Missing Docs Template accordion section -->
+                                    
+                                    <!-- Accordion for Wealth Call Templates -->
+                                    <div class="accordion-section">
+                                        <a class="accordion-section-title" href="#wealth-call-templates">
+                                            <h2 class="title is-5">Wealth Call Templates</h2>
+                                        </a>
+                                        <div id="wealth-call-templates" class="accordion-section-content">
+                                            <div class="acc-panel field column">
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('wealth', 'sign-complete')">Wealth Signing Reminder Complete</button>
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('wealth', 'sign-sys-vm')">Wealth Signing Reminder System VM</button>
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('wealth', 'sign-agent-vm')">Wealth Signing Reminder Agent VM</button>
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('wealth', 'fund-complete')">Wealth Funding Reminder Complete</button>
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('wealth', 'fund-sys-vm')">Wealth Funding Reminder System VM</button>
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('wealth', 'fund-agent-vm')">Wealth Funding Reminder Agent VM</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of Wealth Call Template accordion section -->
+                                    
+                                    <!-- Accordion for Product Select Templates -->
+                                    <div class="accordion-section">
+                                        <a class="accordion-section-title" href="#product-select-templates">
+                                            <h2 class="title is-5">Product Select Templates</h2>
+                                        </a>
+                                        <div id="product-select-templates" class="accordion-section-content">
+                                            <div class="acc-panel field column">
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('product', 'complete-forward')">Product Select Complete - Moving Forward</button>
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('product', 'complete-withdraw')">Product Select Complete - Withdraw App</button>
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('product', 'not-avail')">Borrower Not Available</button>
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('product', 'sys-vm')">System Left Voicemail</button>
+                                                <button class="outbound-template-button" id="" onClick="chooseTemplate('product', 'agent-vm')">Agent Left Voicemail</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of Product Select Template accordion section -->
                                 </div>
-                                <!-- End of Prefunding Template accordion section -->
+                                <!--
+                                ***************
+                                Accordion End
+                                ***************
+                                -->
+                                <div class="container">
+                                    <h2 class="title is-3">Custom Notes</h2>
+                                </div>
+                                <div class="container notes-container">
+                                    <textarea rows="10" cols="35" id="notes-outbound" class="clear-form-outbound" placeholder="Notes..."></textarea>
+                                </div>
+                                <div class="container contact-ddl">
+                                    <label for="contact-type-ddl" datalabel="contact-type-ddl">Contact Type:</label>    
+                                        <select id="contact-type-ddl-outbound" class="ddl-outbound">
+                                            <option value="OCC">OCC - Outbound Customer Comm</option>
+                                            <option value="ODR">ODR - Outbound Document Request</option>
+                                            <option value="OSD">OSD - Outbound Sign Your Docs</option>
+                                            <option value="OEV">OEV - Outbound Employment Verify</option>
+                                        </select>
+                                </div>
+                                <div class="container contact-ddl">
+                                    <label for="contact-person-ddl" datalabel="contact-person-l">Contact Person:</label>
+                                        <select id="contact-person-ddl-outbound" class="ddl-outbound">
+                                            <option value="TB">TB - The Borrower</option>
+                                            <option value="VM">VM - Voicmail</option>
+                                            <option value="UN">UN - Not able to talk</option>
+                                            <option value="INV">INV - Invalid Phone Number</option>
+                                        </select>
+                                </div>
+                                <div class="container contact-ddl">
+                                    <label for="call-number-ddl" datalabel="call-number-ddl">Call Number:</label>
+                                        <select id="call-number-ddl-outbound" class="ddl-outbound">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                </div>
+                                <div class="field is-grouped container button-container">
+                                    <button class="button is-primary copyBtn" id="copyBtnOutbound" value="Copy" onClick="copyToClipboardOutbound()">Copy</button>
+                                    <button class="button is-warning" id="resetOutbound" value="Reset" onClick="clearOutboundForm()">Reset</button>
+                                </div>
+                                <textarea rows="10" cols="50" id="formated-copy-textarea-outbound" class="clear-form" style="position:absolute; left:-1000px; top:-1000px;"></textarea>
+                            </div>
+                            
+                            
+                            
+                            
+                            
+                            <!--
+                            *************
+                            CHAT PAGE 
+                            *************
+                            -->
+                            <div id="chat" class="contact-type-tabcontent">
+                                <div class="chat-tabs">
+                                    <button id="left-chat-tab" class="chat-tablinks" onClick="openChat(event, 'left-chat')">Chat</button>
+                                    <button id="middle-chat-tab" class="chat-tablinks" onClick="openChat(event, 'middle-chat')">Chat</button>
+                                    <button id="right-chat-tab" class="chat-tablinks" onClick="openChat(event, 'right-chat')">Chat</button>
+                                </div>
+                                <div id="color-bar">
+                                    <div id="left-chat-color-bar" class="chat-button-color-bar"></div>
+                                    <div id="middle-chat-color-bar" class="chat-button-color-bar"></div>
+                                    <div id="right-chat-color-bar" class="chat-button-color-bar"></div>
+                                </div>
+                                
+                                
+                                
+                                
+                                
+                                
                                 <!--
                                 *************
-                                http://inspirationalpixels.com/tutorials/creating-an-accordion-with-html-css-jquery 
+                                LEFT CHAT PAGE 
                                 *************
                                 -->
-                                <!-- Accordion for Signing Templates -->
-                                <div class="accordion-section">
-                                    <a class="accordion-section-title" href="#signing-templates">
-                                        <h2 class="title is-5">Signing Templates</h2>
-                                    </a>
-                                    <div id="signing-templates" class="accordion-section-content">
-                                        <div class="acc-panel field column">
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('signing', 'complete')">Signing Call Complete</button>
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('signing', 'thinking')">Borrower Still Thinking</button>
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('signing', 'no-verify')">Didn't Want To Verify</button>
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('signing', 'not-avail')">Borrower Not Available</button>
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('signing', 'sys-vm')">System Left Voicemail</button>
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('signing', 'agent-vm')">Agent Left Voicemail</button>
-                                        </div>
+                                <div id="left-chat" class="chat-tabcontent">
+                                    <div class="container">
+                                        <h2 class="title is-3">Verified?</h2>
                                     </div>
-                                </div>
-                                <!-- End of Signing Template accordion section -->
-                                
-                                <!-- Accordion for Missing Docs Templates -->
-                                <div class="accordion-section">
-                                    <a class="accordion-section-title" href="#missing-docs-templates">
-                                        <h2 class="title is-5">Missing Docs Templates</h2>
-                                    </a>
-                                    <div id="missing-docs-templates" class="accordion-section-content">
-                                        <div class="acc-panel field column">
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('miss-doc', 'complete')">Missing Docs Complete</button>
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('miss-doc', 'no-verify')">Didn't Want To Verify</button>
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('miss-doc', 'not-avail')">Borrower Not Available</button>
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('miss-doc', 'sys-vm')">System Left Voicemail</button>
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('miss-doc', 'agent-vm')">Agent Left Voicemail</button>
-                                        </div>
+                                        <div class="container verify-yes-checkbox checkbox-checked-bg" id="verify-address-div">
+                                        <input type="checkbox" class="checkbox left-verify-checkbox chat-verify-checkbox" id="verify-yes-left" name="verify-yes-checkbox" />
+                                        <label for="verify-address-checkbox">Yes</label>
                                     </div>
-                                </div>
-                                <!-- End of Missing Docs Template accordion section -->
-                                
-                                <!-- Accordion for Wealth Call Templates -->
-                                <div class="accordion-section">
-                                    <a class="accordion-section-title" href="#wealth-call-templates">
-                                        <h2 class="title is-5">Wealth Call Templates</h2>
-                                    </a>
-                                    <div id="wealth-call-templates" class="accordion-section-content">
-                                        <div class="acc-panel field column">
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('wealth', 'sign-complete')">Wealth Signing Reminder Complete</button>
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('wealth', 'sign-sys-vm')">Wealth Signing Reminder System VM</button>
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('wealth', 'sign-agent-vm')">Wealth Signing Reminder Agent VM</button>
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('wealth', 'fund-complete')">Wealth Funding Reminder Complete</button>
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('wealth', 'fund-sys-vm')">Wealth Funding Reminder System VM</button>
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('wealth', 'fund-agent-vm')">Wealth Funding Reminder Agent VM</button>
-                                        </div>
+                                    <div class="container verify-checkbox checkbox-checked-bg" id="verify-address-div">
+                                        <input type="checkbox" class="checkbox left-verify-checkbox chat-verify-checkbox" id="verify-no-left" name="verify-no-checkbox" />
+                                        <label for="verify-address-checkbox">No</label>
                                     </div>
-                                </div>
-                                <!-- End of Wealth Call Template accordion section -->
-                                
-                                <!-- Accordion for Product Select Templates -->
-                                <div class="accordion-section">
-                                    <a class="accordion-section-title" href="#product-select-templates">
-                                        <h2 class="title is-5">Product Select Templates</h2>
-                                    </a>
-                                    <div id="product-select-templates" class="accordion-section-content">
-                                        <div class="acc-panel field column">
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('product', 'complete-forward')">Product Select Complete - Moving Forward</button>
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('product', 'complete-withdraw')">Product Select Complete - Withdraw App</button>
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('product', 'not-avail')">Borrower Not Available</button>
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('product', 'sys-vm')">System Left Voicemail</button>
-                                            <button class="outbound-template-button" id="" onClick="chooseTemplate('product', 'agent-vm')">Agent Left Voicemail</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End of Product Select Template accordion section -->
-                            </div>
-                            <!--
-                            ***************
-                            Accordion End
-                            ***************
-                            -->
-                            <div class="container">
-                                <h2 class="title is-3">Custom Notes</h2>
-                            </div>
-                            <div class="container notes-container">
-                                <textarea rows="10" cols="35" id="notes-outbound" class="clear-form-outbound" placeholder="Notes..."></textarea>
-                            </div>
-                            <div class="container contact-ddl">
-                                <label for="contact-type-ddl" datalabel="contact-type-ddl">Contact Type:</label>    
-                                    <select id="contact-type-ddl-outbound" class="ddl-outbound">
-                                        <option value="OCC">OCC - Outbound Customer Comm</option>
-                                        <option value="ODR">ODR - Outbound Document Request</option>
-                                        <option value="OSD">OSD - Outbound Sign Your Docs</option>
-                                        <option value="OEV">OEV - Outbound Employment Verify</option>
+                                    <select id="left-color-picker">
+                                        <option value="chooseColor">Choose Chat Color</option>
+                                        <option id="hot-pink" value="hot-pink"></option>
+                                        <option id="apple" value="apple"></option>
+                                        <option id="wild-strawberry" value="wild-strawberry"></option>
+                                        <option id="japanese-laurel" value="japanese-laurel"></option>
+                                        <option id="mona-lisa" value="mona-lisa"></option>
+                                        <option id="pompadour" value="pompadour"></option>
+                                        <option id="shamrock" value="shamrock"></option>
+                                        <option id="aluminium" value="aluminium"></option>
+                                        <option id="burnt-sienna" value="burnt-sienna"></option>
+                                        <option id="vivid-violet" value="vivid-violet"></option>
+                                        <option id="guardsman-red" value="guardsman-red"></option>
+                                        <option id="astronaut" value="astronaut"></option>
+                                        <option id="robins-egg-blue" value="robins-egg-blue"></option>
+                                        <option id="indochine" value="indochine"></option>
+                                        <option id="science-blue" value="science-blue"></option>
+                                        <option id="tree-poppy" value="tree-poppy"></option>
+                                        <option id="turquoise-blue" value="turquoise-blue"></option>
+                                        <option id="pigment-indigo" value="pigment-indigo"></option>
+                                        <option id="heliotrope" value="heliotrope"></option>
+                                        <option id="amber" value="amber"></option>
+                                        <option id="vin-rouge" value="vin-rouge"></option>
+                                        <option id="bright-grey" value="bright-grey"></option>
+                                        <option id="azure-radiance" value="azure-radiance"></option>
+                                        <option id="bordeaux" value="bordeaux"></option>
+                                        <option id="pacific-blue" value="pacific-blue"></option>
+                                        <option id="flirt" value="flirt"></option>
+                                        <option id="trout" value="trout"></option>
+                                        <option id="dodger-blue" value="dodger-blue"></option>
+                                        <option id="golden-dream" value="golden-dream"></option>
+                                        <option id="mine-shaft" value="mine-shaft"></option>
+                                        <option id="razzmatazz" value="razzmatazz"></option>
+                                        <option id="emperor" value="emperor"></option>
                                     </select>
-                            </div>
-                            <div class="container contact-ddl">
-                                <label for="contact-person-ddl" datalabel="contact-person-l">Contact Person:</label>
-                                    <select id="contact-person-ddl-outbound" class="ddl-outbound">
-                                        <option value="TB">TB - The Borrower</option>
-                                        <option value="VM">VM - Voicmail</option>
-                                        <option value="UN">UN - Not able to talk</option>
-                                        <option value="INV">INV - Invalid Phone Number</option>
-                                    </select>
-                            </div>
-                            <div class="container contact-ddl">
-                                <label for="call-number-ddl" datalabel="call-number-ddl">Call Number:</label>
-                                    <select id="call-number-ddl-outbound" class="ddl-outbound">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                    </select>
-                            </div>
-                            <div class="field is-grouped container button-container">
-                                <button class="button is-primary copyBtn" id="copyBtnOutbound" value="Copy" onClick="copyToClipboardOutbound()">Copy</button>
-                                <button class="button is-warning" id="resetOutbound" value="Reset" onClick="clearOutboundForm()">Reset</button>
-                            </div>
-                            <textarea rows="10" cols="50" id="formated-copy-textarea-outbound" class="clear-form" style="position:absolute; left:-1000px; top:-1000px;"></textarea>
-                        </div>
-                        
-                        
-                        
-                        
-                        
-                        <!--
-                        *************
-                        CHAT PAGE 
-                        *************
-                        -->
-                        <div id="chat" class="contact-type-tabcontent">
-                            <div class="chat-tabs">
-                                <button id="left-chat-tab" class="chat-tablinks" onClick="openChat(event, 'left-chat')">Chat</button>
-                                <button id="middle-chat-tab" class="chat-tablinks" onClick="openChat(event, 'middle-chat')">Chat</button>
-                                <button id="right-chat-tab" class="chat-tablinks" onClick="openChat(event, 'right-chat')">Chat</button>
-                            </div>
-                            <div id="color-bar">
-                                <div id="left-chat-color-bar" class="chat-button-color-bar"></div>
-                                <div id="middle-chat-color-bar" class="chat-button-color-bar"></div>
-                                <div id="right-chat-color-bar" class="chat-button-color-bar"></div>
-                            </div>
-                            
-                            
-                            
-                            
-                            
-                            
-                            <!--
-                            *************
-                            LEFT CHAT PAGE 
-                            *************
-                            -->
-                            <div id="left-chat" class="chat-tabcontent">
-                                <div class="container">
-                                    <h2 class="title is-3">Verified?</h2>
+                                    <div class="control container textboxes">
+                                    <input class="input clear-form-all clear-form-chat-left" type="text" placeholder="Name on Chat"> 
+                                    </div>
+                                    <div class="container notes-container">
+                                        <textarea rows="10" cols="35" id="notes-chat-left" class="clear-form" placeholder="Notes..."></textarea>
+                                    </div>
+                                    <div class="field is-grouped container button-container">
+                                        <button class="button is-primary copyBtn" id="copyBtn" value="Copy" onClick="copyToClipboardChat('left')">Copy</button>
+                                        <button class="button is-warning" id="reset" value="Reset" onClick="clearChatForm('left')">Reset</button>
+                                    </div>
+                                    <textarea rows="10" cols="50" id="formated-copy-textarea-chat-left" class="clear-form" style="position:absolute; left:-1000px; top:-1000px;"></textarea>
                                 </div>
+                                
+                                
+                                
+                                
+                                
+                                <!--
+                                *************
+                                MIDDLE CHAT PAGE 
+                                *************
+                                -->
+                                <div id="middle-chat" class="chat-tabcontent">
+                                    <div class="container">
+                                        <h2 class="title is-3">Verified?</h2>
+                                    </div>
                                     <div class="container verify-yes-checkbox checkbox-checked-bg" id="verify-address-div">
-                                    <input type="checkbox" class="checkbox left-verify-checkbox chat-verify-checkbox" id="verify-yes-left" name="verify-yes-checkbox" />
-                                    <label for="verify-address-checkbox">Yes</label>
+                                        <input type="checkbox" class="checkbox middle-verify-checkbox chat-verify-checkbox" id="verify-yes-middle" name="verify-yes-checkbox" />
+                                        <label for="verify-address-checkbox">Yes</label>
+                                    </div>
+                                    <div class="container verify-checkbox checkbox-checked-bg" id="verify-address-div">
+                                        <input type="checkbox" class="checkbox middle-verify-checkbox chat-verify-checkboxt" id="verify-no-middle" name="verify-no-checkbox" />
+                                        <label for="verify-address-checkbox">No</label>
+                                    </div>
+                                    <select id="middle-color-picker">
+                                        <option value="chooseColor">Choose Chat Color</option>
+                                        <option id="hot-pink" value="hot-pink"></option>
+                                        <option id="apple" value="apple"></option>
+                                        <option id="wild-strawberry" value="wild-strawberry"></option>
+                                        <option id="japanese-laurel" value="japanese-laurel"></option>
+                                        <option id="mona-lisa" value="mona-lisa"></option>
+                                        <option id="pompadour" value="pompadour"></option>
+                                        <option id="shamrock" value="shamrock"></option>
+                                        <option id="aluminium" value="aluminium"></option>
+                                        <option id="burnt-sienna" value="burnt-sienna"></option>
+                                        <option id="vivid-violet" value="vivid-violet"></option>
+                                        <option id="guardsman-red" value="guardsman-red"></option>
+                                        <option id="astronaut" value="astronaut"></option>
+                                        <option id="robins-egg-blue" value="robins-egg-blue"></option>
+                                        <option id="indochine" value="indochine"></option>
+                                        <option id="science-blue" value="science-blue"></option>
+                                        <option id="tree-poppy" value="tree-poppy"></option>
+                                        <option id="turquoise-blue" value="turquoise-blue"></option>
+                                        <option id="pigment-indigo" value="pigment-indigo"></option>
+                                        <option id="heliotrope" value="heliotrope"></option>
+                                        <option id="amber" value="amber"></option>
+                                        <option id="vin-rouge" value="vin-rouge"></option>
+                                        <option id="bright-grey" value="bright-grey"></option>
+                                        <option id="azure-radiance" value="azure-radiance"></option>
+                                        <option id="bordeaux" value="bordeaux"></option>
+                                        <option id="pacific-blue" value="pacific-blue"></option>
+                                        <option id="flirt" value="flirt"></option>
+                                        <option id="trout" value="trout"></option>
+                                        <option id="dodger-blue" value="dodger-blue"></option>
+                                        <option id="golden-dream" value="golden-dream"></option>
+                                        <option id="mine-shaft" value="mine-shaft"></option>
+                                        <option id="razzmatazz" value="razzmatazz"></option>
+                                        <option id="emperor" value="emperor"></option>
+                                    </select>
+                                    <div class="control container textboxes">
+                                    <input class="input clear-form-all clear-form-chat-middle" type="text" placeholder="Name on Chat"> 
+                                    </div>
+                                    <div class="container notes-container">
+                                        <textarea rows="10" cols="35" id="notes-chat-middle" class="clear-form" placeholder="Notes..."></textarea>
+                                    </div>
+                                    <div class="field is-grouped container button-container">
+                                        <button class="button is-primary copyBtn" id="copyBtn" value="Copy" onClick="copyToClipboardChat('middle')">Copy</button>
+                                        <button class="button is-warning" id="reset" value="Reset" onClick="clearChatForm('middle')">Reset</button>
+                                    </div>
+                                    <textarea rows="10" cols="50" id="formated-copy-textarea-chat-middle" class="clear-form" style="position:absolute; left:-1000px; top:-1000px;"></textarea>
                                 </div>
-                                <div class="container verify-checkbox checkbox-checked-bg" id="verify-address-div">
-                                    <input type="checkbox" class="checkbox left-verify-checkbox chat-verify-checkbox" id="verify-no-left" name="verify-no-checkbox" />
-                                    <label for="verify-address-checkbox">No</label>
+                                
+                                
+                                
+                                
+                                
+                                <!--
+                                *************
+                                RIGHT CHAT PAGE 
+                                *************
+                                -->
+                                <div id="right-chat" class="chat-tabcontent">
+                                    <div class="container">
+                                        <h2 class="title is-3">Verified?</h2>
+                                    </div>
+                                    <div class="container verify-yes-checkbox checkbox-checked-bg" id="verify-address-div">
+                                        <input type="checkbox" class="checkbox right-verify-checkbox chat-verify-checkbox" id="verify-yes-right" name="verify-yes-checkbox" />
+                                        <label for="verify-address-checkbox">Yes</label>
+                                    </div>
+                                    <div class="container verify-checkbox checkbox-checked-bg" id="verify-address-div">
+                                        <input type="checkbox" class="checkbox right-verify-checkbox chat-verify-checkbox" id="verify-no-right" name="verify-no-checkbox" />
+                                        <label for="verify-address-checkbox">No</label>
+                                    </div>
+                                    <select id="right-color-picker">
+                                        <option value="chooseColor">Choose Chat Color</option>
+                                        <option id="hot-pink" value="hot-pink"></option>
+                                        <option id="apple" value="apple"></option>
+                                        <option id="wild-strawberry" value="wild-strawberry"></option>
+                                        <option id="japanese-laurel" value="japanese-laurel"></option>
+                                        <option id="mona-lisa" value="mona-lisa"></option>
+                                        <option id="pompadour" value="pompadour"></option>
+                                        <option id="shamrock" value="shamrock"></option>
+                                        <option id="aluminium" value="aluminium"></option>
+                                        <option id="burnt-sienna" value="burnt-sienna"></option>
+                                        <option id="vivid-violet" value="vivid-violet"></option>
+                                        <option id="guardsman-red" value="guardsman-red"></option>
+                                        <option id="astronaut" value="astronaut"></option>
+                                        <option id="robins-egg-blue" value="robins-egg-blue"></option>
+                                        <option id="indochine" value="indochine"></option>
+                                        <option id="science-blue" value="science-blue"></option>
+                                        <option id="tree-poppy" value="tree-poppy"></option>
+                                        <option id="turquoise-blue" value="turquoise-blue"></option>
+                                        <option id="pigment-indigo" value="pigment-indigo"></option>
+                                        <option id="heliotrope" value="heliotrope"></option>
+                                        <option id="amber" value="amber"></option>
+                                        <option id="vin-rouge" value="vin-rouge"></option>
+                                        <option id="bright-grey" value="bright-grey"></option>
+                                        <option id="azure-radiance" value="azure-radiance"></option>
+                                        <option id="bordeaux" value="bordeaux"></option>
+                                        <option id="pacific-blue" value="pacific-blue"></option>
+                                        <option id="flirt" value="flirt"></option>
+                                        <option id="trout" value="trout"></option>
+                                        <option id="dodger-blue" value="dodger-blue"></option>
+                                        <option id="golden-dream" value="golden-dream"></option>
+                                        <option id="mine-shaft" value="mine-shaft"></option>
+                                        <option id="razzmatazz" value="razzmatazz"></option>
+                                        <option id="emperor" value="emperor"></option>
+                                    </select>
+                                    <div class="control container textboxes">
+                                    <input class="input clear-form-all clear-form-chat-right" type="text" placeholder="Name on Chat"> 
+                                    </div>
+                                    <div class="container notes-container">
+                                        <textarea rows="10" cols="35" id="notes-chat-right" class="clear-form" placeholder="Notes..."></textarea>
+                                    </div>
+                                    <div class="field is-grouped container button-container">
+                                        <button class="button is-primary copyBtn" id="copyBtn" value="Copy" onClick="copyToClipboardChat('right')">Copy</button>
+                                        <button class="button is-warning" id="reset" value="Reset" onClick="clearChatForm('right')">Reset</button>
+                                    </div>
+                                    <textarea rows="10" cols="50" id="formated-copy-textarea-chat-right" class="clear-form" style="position:absolute; left:-1000px; top:-1000px;"></textarea>
                                 </div>
-                                <select id="left-color-picker">
-                                    <option value="chooseColor">Choose Chat Color</option>
-                                    <option id="hot-pink" value="hot-pink"></option>
-                                    <option id="apple" value="apple"></option>
-                                    <option id="wild-strawberry" value="wild-strawberry"></option>
-                                    <option id="japanese-laurel" value="japanese-laurel"></option>
-                                    <option id="mona-lisa" value="mona-lisa"></option>
-                                    <option id="pompadour" value="pompadour"></option>
-                                    <option id="shamrock" value="shamrock"></option>
-                                    <option id="aluminium" value="aluminium"></option>
-                                    <option id="burnt-sienna" value="burnt-sienna"></option>
-                                    <option id="vivid-violet" value="vivid-violet"></option>
-                                    <option id="guardsman-red" value="guardsman-red"></option>
-                                    <option id="astronaut" value="astronaut"></option>
-                                    <option id="robins-egg-blue" value="robins-egg-blue"></option>
-                                    <option id="indochine" value="indochine"></option>
-                                    <option id="science-blue" value="science-blue"></option>
-                                    <option id="tree-poppy" value="tree-poppy"></option>
-                                    <option id="turquoise-blue" value="turquoise-blue"></option>
-                                    <option id="pigment-indigo" value="pigment-indigo"></option>
-                                    <option id="heliotrope" value="heliotrope"></option>
-                                    <option id="amber" value="amber"></option>
-                                    <option id="vin-rouge" value="vin-rouge"></option>
-                                    <option id="bright-grey" value="bright-grey"></option>
-                                    <option id="azure-radiance" value="azure-radiance"></option>
-                                    <option id="bordeaux" value="bordeaux"></option>
-                                    <option id="pacific-blue" value="pacific-blue"></option>
-                                    <option id="flirt" value="flirt"></option>
-                                    <option id="trout" value="trout"></option>
-                                    <option id="dodger-blue" value="dodger-blue"></option>
-                                    <option id="golden-dream" value="golden-dream"></option>
-                                    <option id="mine-shaft" value="mine-shaft"></option>
-                                    <option id="razzmatazz" value="razzmatazz"></option>
-                                    <option id="emperor" value="emperor"></option>
-                                </select>
-                                <div class="control container textboxes">
-                                <input class="input clear-form-all clear-form-chat-left" type="text" placeholder="Name on Chat"> 
-                                </div>
-                                <div class="container notes-container">
-                                    <textarea rows="10" cols="35" id="notes-chat-left" class="clear-form" placeholder="Notes..."></textarea>
-                                </div>
-                                <div class="field is-grouped container button-container">
-                                    <button class="button is-primary copyBtn" id="copyBtn" value="Copy" onClick="copyToClipboardChat('left')">Copy</button>
-                                    <button class="button is-warning" id="reset" value="Reset" onClick="clearChatForm('left')">Reset</button>
-                                </div>
-                                <textarea rows="10" cols="50" id="formated-copy-textarea-chat-left" class="clear-form" style="position:absolute; left:-1000px; top:-1000px;"></textarea>
-                            </div>
+                                
+                                
                             
-                            
-                            
-                            
-                            
+                            </div><!-- End of Chat div -->
+                                
                             <!--
                             *************
-                            MIDDLE CHAT PAGE 
+                            END CHAT PAGE 
                             *************
                             -->
-                            <div id="middle-chat" class="chat-tabcontent">
-                                <div class="container">
-                                    <h2 class="title is-3">Verified?</h2>
-                                </div>
-                                <div class="container verify-yes-checkbox checkbox-checked-bg" id="verify-address-div">
-                                    <input type="checkbox" class="checkbox middle-verify-checkbox chat-verify-checkbox" id="verify-yes-middle" name="verify-yes-checkbox" />
-                                    <label for="verify-address-checkbox">Yes</label>
-                                </div>
-                                <div class="container verify-checkbox checkbox-checked-bg" id="verify-address-div">
-                                    <input type="checkbox" class="checkbox middle-verify-checkbox chat-verify-checkboxt" id="verify-no-middle" name="verify-no-checkbox" />
-                                    <label for="verify-address-checkbox">No</label>
-                                </div>
-                                <select id="middle-color-picker">
-                                    <option value="chooseColor">Choose Chat Color</option>
-                                    <option id="hot-pink" value="hot-pink"></option>
-                                    <option id="apple" value="apple"></option>
-                                    <option id="wild-strawberry" value="wild-strawberry"></option>
-                                    <option id="japanese-laurel" value="japanese-laurel"></option>
-                                    <option id="mona-lisa" value="mona-lisa"></option>
-                                    <option id="pompadour" value="pompadour"></option>
-                                    <option id="shamrock" value="shamrock"></option>
-                                    <option id="aluminium" value="aluminium"></option>
-                                    <option id="burnt-sienna" value="burnt-sienna"></option>
-                                    <option id="vivid-violet" value="vivid-violet"></option>
-                                    <option id="guardsman-red" value="guardsman-red"></option>
-                                    <option id="astronaut" value="astronaut"></option>
-                                    <option id="robins-egg-blue" value="robins-egg-blue"></option>
-                                    <option id="indochine" value="indochine"></option>
-                                    <option id="science-blue" value="science-blue"></option>
-                                    <option id="tree-poppy" value="tree-poppy"></option>
-                                    <option id="turquoise-blue" value="turquoise-blue"></option>
-                                    <option id="pigment-indigo" value="pigment-indigo"></option>
-                                    <option id="heliotrope" value="heliotrope"></option>
-                                    <option id="amber" value="amber"></option>
-                                    <option id="vin-rouge" value="vin-rouge"></option>
-                                    <option id="bright-grey" value="bright-grey"></option>
-                                    <option id="azure-radiance" value="azure-radiance"></option>
-                                    <option id="bordeaux" value="bordeaux"></option>
-                                    <option id="pacific-blue" value="pacific-blue"></option>
-                                    <option id="flirt" value="flirt"></option>
-                                    <option id="trout" value="trout"></option>
-                                    <option id="dodger-blue" value="dodger-blue"></option>
-                                    <option id="golden-dream" value="golden-dream"></option>
-                                    <option id="mine-shaft" value="mine-shaft"></option>
-                                    <option id="razzmatazz" value="razzmatazz"></option>
-                                    <option id="emperor" value="emperor"></option>
-                                </select>
-                                <div class="control container textboxes">
-                                <input class="input clear-form-all clear-form-chat-middle" type="text" placeholder="Name on Chat"> 
-                                </div>
-                                <div class="container notes-container">
-                                    <textarea rows="10" cols="35" id="notes-chat-middle" class="clear-form" placeholder="Notes..."></textarea>
-                                </div>
-                                <div class="field is-grouped container button-container">
-                                    <button class="button is-primary copyBtn" id="copyBtn" value="Copy" onClick="copyToClipboardChat('middle')">Copy</button>
-                                    <button class="button is-warning" id="reset" value="Reset" onClick="clearChatForm('middle')">Reset</button>
-                                </div>
-                                <textarea rows="10" cols="50" id="formated-copy-textarea-chat-middle" class="clear-form" style="position:absolute; left:-1000px; top:-1000px;"></textarea>
+                            
+                            
+                            <div id="copy-snackbar">Copied!</div>
+                            <div id="reset-snackbar">Reset!</div>
+                            <div class="field is-grouped container button-container">
+                                <button class="button is-warning" id="reset-all-forms" value="Reset-All-Forms" onClick="clearAllForms()">Reset All Pages</button>
                             </div>
-                            
-                            
-                            
-                            
-                            
-                            <!--
-                            *************
-                            RIGHT CHAT PAGE 
-                            *************
-                            -->
-                            <div id="right-chat" class="chat-tabcontent">
-                                <div class="container">
-                                    <h2 class="title is-3">Verified?</h2>
-                                </div>
-                                <div class="container verify-yes-checkbox checkbox-checked-bg" id="verify-address-div">
-                                    <input type="checkbox" class="checkbox right-verify-checkbox chat-verify-checkbox" id="verify-yes-right" name="verify-yes-checkbox" />
-                                    <label for="verify-address-checkbox">Yes</label>
-                                </div>
-                                <div class="container verify-checkbox checkbox-checked-bg" id="verify-address-div">
-                                    <input type="checkbox" class="checkbox right-verify-checkbox chat-verify-checkbox" id="verify-no-right" name="verify-no-checkbox" />
-                                    <label for="verify-address-checkbox">No</label>
-                                </div>
-                                <select id="right-color-picker">
-                                    <option value="chooseColor">Choose Chat Color</option>
-                                    <option id="hot-pink" value="hot-pink"></option>
-                                    <option id="apple" value="apple"></option>
-                                    <option id="wild-strawberry" value="wild-strawberry"></option>
-                                    <option id="japanese-laurel" value="japanese-laurel"></option>
-                                    <option id="mona-lisa" value="mona-lisa"></option>
-                                    <option id="pompadour" value="pompadour"></option>
-                                    <option id="shamrock" value="shamrock"></option>
-                                    <option id="aluminium" value="aluminium"></option>
-                                    <option id="burnt-sienna" value="burnt-sienna"></option>
-                                    <option id="vivid-violet" value="vivid-violet"></option>
-                                    <option id="guardsman-red" value="guardsman-red"></option>
-                                    <option id="astronaut" value="astronaut"></option>
-                                    <option id="robins-egg-blue" value="robins-egg-blue"></option>
-                                    <option id="indochine" value="indochine"></option>
-                                    <option id="science-blue" value="science-blue"></option>
-                                    <option id="tree-poppy" value="tree-poppy"></option>
-                                    <option id="turquoise-blue" value="turquoise-blue"></option>
-                                    <option id="pigment-indigo" value="pigment-indigo"></option>
-                                    <option id="heliotrope" value="heliotrope"></option>
-                                    <option id="amber" value="amber"></option>
-                                    <option id="vin-rouge" value="vin-rouge"></option>
-                                    <option id="bright-grey" value="bright-grey"></option>
-                                    <option id="azure-radiance" value="azure-radiance"></option>
-                                    <option id="bordeaux" value="bordeaux"></option>
-                                    <option id="pacific-blue" value="pacific-blue"></option>
-                                    <option id="flirt" value="flirt"></option>
-                                    <option id="trout" value="trout"></option>
-                                    <option id="dodger-blue" value="dodger-blue"></option>
-                                    <option id="golden-dream" value="golden-dream"></option>
-                                    <option id="mine-shaft" value="mine-shaft"></option>
-                                    <option id="razzmatazz" value="razzmatazz"></option>
-                                    <option id="emperor" value="emperor"></option>
-                                </select>
-                                <div class="control container textboxes">
-                                <input class="input clear-form-all clear-form-chat-right" type="text" placeholder="Name on Chat"> 
-                                </div>
-                                <div class="container notes-container">
-                                    <textarea rows="10" cols="35" id="notes-chat-right" class="clear-form" placeholder="Notes..."></textarea>
-                                </div>
-                                <div class="field is-grouped container button-container">
-                                    <button class="button is-primary copyBtn" id="copyBtn" value="Copy" onClick="copyToClipboardChat('right')">Copy</button>
-                                    <button class="button is-warning" id="reset" value="Reset" onClick="clearChatForm('right')">Reset</button>
-                                </div>
-                                <textarea rows="10" cols="50" id="formated-copy-textarea-chat-right" class="clear-form" style="position:absolute; left:-1000px; top:-1000px;"></textarea>
-                            </div>
-                            
-                            
-                        
-                        </div><!-- End of Chat div -->
-                            
-                        <!--
-                        *************
-                        END CHAT PAGE 
-                        *************
-                        -->
-                        
-                        
-                        <div id="copy-snackbar">Copied!</div>
-                        <div id="reset-snackbar">Reset!</div>
-                        <div class="field is-grouped container button-container">
-                            <button class="button is-warning" id="reset-all-forms" value="Reset-All-Forms" onClick="clearAllForms()">Reset All Pages</button>
-                        </div>
-                    </div><!-- End of column-for-width -->
-                </div><!-- End of column -->
-            </div><!-- End of columns is-centered -->
-        </div><!-- End of notification -->
-    </div><!-- End of container is-fluid -->
-</section>
+                        </div><!-- End of column-for-width -->
+                    </div><!-- End of column -->
+                </div><!-- End of columns is-centered -->
+            </div><!-- End of notification -->
+        </div><!-- End of container is-fluid -->
+    </section>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/Testcopyfile.js"></script>

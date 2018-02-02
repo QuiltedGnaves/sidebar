@@ -27,11 +27,15 @@ function makeParagraphForInbound() {
     var bwrVerified = "Verified BWR. ";
     var calledFrom = "Called from ";
     var paragraphToCopy = "";
+    var newLine = "\n";
+    var questionText = "Question:  "
+    var notesText = "Notes:  "
     
     // Called from Number
     var calledFromNumber = $('#calledFromNumber').val();
     
     // Notes
+    var question = $("#question-inbound").val();
     var notes = $("#notes-inbound").val();
     
     // Contact Type ex. ICC or IEV
@@ -43,7 +47,9 @@ function makeParagraphForInbound() {
     // Contact Person
     var contactPersonDdl = "TB";
     
-    return paragraphToCopy = contactTypeDdl + hyphen + contactMediumDdl + hyphen + contactPersonDdl + colonSpace + bwrVerified + calledFrom + calledFromNumber + periodSpace + notes;
+    return paragraphToCopy = contactTypeDdl + hyphen + contactMediumDdl + hyphen 
+        + contactPersonDdl + colonSpace + bwrVerified + calledFrom + calledFromNumber 
+        + periodSpace + newLine + newLine + questionText + question + newLine + newLine + notesText + notes;
 
 }
 
@@ -78,6 +84,7 @@ function copyToClipboardInbound() {
 //********* Inbound Clear Form Function *********
 function clearInboundForm() {
     $('.clear-form-inbound').val('');
+    $('#question-inbound').val('');
     $('.verify-checkbox-input-inbound').prop('checked', false);
     $(verifyPhoneInbound).parent().removeClass('checkbox-checked-bg');
     $(verifyAddressInbound).parent().removeClass('checkbox-checked-bg');
@@ -143,6 +150,7 @@ function makeParagraphForOutbound() {
     
     var bwrVerified = "Verified BWR. ";
     var paragraphToCopy = "";
+    
     
     // Notes
     var notes = $("#notes-outbound").val();
@@ -281,9 +289,9 @@ function chooseTemplate(category, template) {
             switch (switchTemplate) {
                 case 'complete':
                     if (extraAchAmount != '') {
-                        finalTemplate = templateOcc + hyphen + templateCall + hyphen + templateTb + colonSpace + numberCalled + numberCalledOutbound + periodSpace + "Pre-funding. Verified Bwr. Explained benefits. Confirmed auto-pay. " + extraAch + "$" + extraAchAmount + periodSpace + "Confirmed timeline for funding. ";
+                        finalTemplate = templateOcc + hyphen + templateCall + hyphen + templateTb + colonSpace + numberCalled + numberCalledOutbound + periodSpace + "Pre-funding. Verified Bwr. Explained benefits. Confirmed auto-pay status. " + extraAch + "$" + extraAchAmount + periodSpace + "Confirmed timeline for funding. ";
                     } else {
-                        finalTemplate = templateOcc + hyphen + templateCall + hyphen + templateTb + colonSpace + numberCalled + numberCalledOutbound + periodSpace + "Pre-funding. Verified Bwr. Explained benefits. Confirmed auto-pay.  Confirmed timeline for funding. ";
+                        finalTemplate = templateOcc + hyphen + templateCall + hyphen + templateTb + colonSpace + numberCalled + numberCalledOutbound + periodSpace + "Pre-funding. Verified Bwr. Explained benefits. Confirmed auto-pay status.  Confirmed timeline for funding. ";
                     }
                     
                     break;
@@ -1088,8 +1096,12 @@ function makeParagraphForChat(chat) {
     var bwrVerified;
     var colonSpace = ": ";
     var paragraphToCopy = "";
+    var newLine = "\n";
+    var questionText = "Question:  "
+    var notesText = "Notes:  "
 
     // Notes
+    var question = $("#question-chat-" + chat).val();
     var notes = $('#notes-chat-' + chat).val();
     
     // Contact Type ex. ODR, ICC, etc.
@@ -1106,7 +1118,7 @@ function makeParagraphForChat(chat) {
         bwrVerified = "Not verified. ";
     }
     
-    return paragraphToCopy = contactTypeDdl + hyphen + contactMediumDdl + hyphen + contactPersonDdl + colonSpace + bwrVerified + notes;
+    return paragraphToCopy = contactTypeDdl + hyphen + contactMediumDdl + hyphen + contactPersonDdl + colonSpace + bwrVerified + newLine + newLine + questionText + question + newLine + newLine + notesText + notes;
 }
 
 function copyToClipboardChat(chat) {
@@ -1150,6 +1162,7 @@ function clearChatForm(chat) {
     $('#' + chat +'-color-picker').removeClass();
     $('#added-color-' + chat).remove();
     $('#notes-chat-' + chat).val('');
+    $('#question-chat-' + chat).val('');
     resetSnackbar();
 }
 
@@ -1167,8 +1180,12 @@ function makeParagraphForLeftChat() {
     var colonSpace = ": ";
     var periodSpace = ". ";
     var paragraphToCopy = "";
+    var newLine = "\n";
+    var questionText = "Question: "
+    var notesText = "Notes: "
     
     // Notes
+    var question = $("#question-chat-left").val();
     var notes = $("#notes-chat-left").val();
     
     // Contact Type ex. ODR, ICC, etc.
@@ -1180,7 +1197,7 @@ function makeParagraphForLeftChat() {
     // Contact Person
     var contactPersonDdl = 'TB';
     
-    return paragraphToCopy = contactTypeDdl + hyphen + contactMediumDdl + hyphen + contactPersonDdl + colonSpace + bwrVerified + periodSpace + notes;
+    return paragraphToCopy = contactTypeDdl + hyphen + contactMediumDdl + hyphen + contactPersonDdl + colonSpace + bwrVerified + periodSpace + newLine + questionText + question + newLine + notesText + notes;
 }
 
 //*************************************
@@ -1198,8 +1215,12 @@ function makeParagraphForMidChat() {
     var colonSpace = ": ";
     var periodSpace = ". ";
     var paragraphToCopy = "";
+    var newLine = "\n";
+    var questionText = "Question: "
+    var notesText = "Notes: "
     
     // Notes
+    var question = $("#question-chat-middle").val();
     var notes = $("#notes-chat-middle").val();
     
     // Contact Type ex. ODR, ICC, etc.
@@ -1211,7 +1232,7 @@ function makeParagraphForMidChat() {
     // Contact Person
     var contactPersonDdl = 'TB';
     
-    return paragraphToCopy = contactTypeDdl + hyphen + contactMediumDdl + hyphen + contactPersonDdl + colonSpace + bwrVerified + periodSpace + notes;
+    return paragraphToCopy = contactTypeDdl + hyphen + contactMediumDdl + hyphen + contactPersonDdl + colonSpace + bwrVerified + periodSpace + newLine + questionText + question + newLine + notesText +notes;
 }
 
 
@@ -1230,8 +1251,12 @@ function makeParagraphForRightChat() {
     var colonSpace = ": ";
     var periodSpace = ". ";
     var paragraphToCopy = "";
+    var newLine = "\n";
+    var questionText = "Question: "
+    var notesText = "Notes: "
     
     // Notes
+    var question = $("#question-chat-right").val();
     var notes = $("#notes-chat-right").val();
     
     // Contact Type ex. ODR, ICC, etc.
@@ -1243,7 +1268,7 @@ function makeParagraphForRightChat() {
     // Contact Person
     var contactPersonDdl = 'TB';
     
-    return paragraphToCopy = contactTypeDdl + hyphen + contactMediumDdl + hyphen + contactPersonDdl + colonSpace + bwrVerified + periodSpace + notes;
+    return paragraphToCopy = contactTypeDdl + hyphen + contactMediumDdl + hyphen + contactPersonDdl + colonSpace + bwrVerified + periodSpace + newLine + questionText + question + newLine + notesText +notes;
 }
 
 //********* Copy To Clipboard Function *********

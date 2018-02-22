@@ -1,0 +1,474 @@
+/**************************************************/
+/******* GLOBAL ***********************************/
+/**************************************************/
+
+#main-section {
+    padding-top: 10px;
+}
+.max-width-to-parent, .textboxes {
+    max-width: 100%;
+}
+
+#primary-column {
+    background-color: #F5F5F5;
+    max-width: 366px;
+    min-width: 366px;
+}
+.textboxes {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+textarea {
+    min-height: 63px;
+    max-width: 294px;
+}
+input[type='checkbox'] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.button-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/**** HERO BANNER ****/
+
+#banner-title {
+    font-size: 3em;
+    padding: 0 7.344px;
+    max-width: 294px;
+}
+#main-banner {
+    background-color: #00B8F1;
+}
+
+
+
+
+/**** MAIN TABS ****/
+
+
+/* Style the tab */
+.main-tabs, .outbound-tabs, .chat-tabs {
+    overflow: hidden;
+    background-color: #00B8F1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.main-tabs button, .outbound-tabs button, .chat-tabs button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 8%;
+    transition: 0.3s;
+}
+
+#chat-btn {
+    padding-left: 33.7745px;
+    padding-right: 33.7745px;
+}
+
+/* Change background color of buttons on hover */
+.main-tabs button:hover, .outbound-tabs button:hover, .chat-tabs button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.main-tabs button.active, .outbound-tabs button.active, .chat-tabs button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.main-tab-content, .outbound-tab-content, .chat-tab-content {
+    display: none;
+    padding: 6px 12px;
+    /*border: 1px solid #ccc; */
+    border-top: none;
+}
+
+/**** COPY BUTTON ****/
+
+.copy-btn {
+    margin-right: 15px;
+    background-color: #00B8F1 !important;
+}
+
+/**************************************************/
+/******** INBOUND *********************************/
+/**************************************************/
+
+#ddl-inbound {
+    margin-bottom: 10px;
+}
+.verify-title {
+    margin: 10px auto;
+}
+.question-container {
+    margin-top: 10px;
+}
+.separator {
+    height: 1px;
+    background-color: gray;
+    max-width: 263px;
+}
+
+/**************************************************/
+/******** OUTBOUND ********************************/
+/**************************************************/
+
+/**** Template buttons ****/
+
+/* Style the tab */
+.template-tabs {
+    overflow: hidden;
+    background-color: #00B8F1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.template-tabs button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 8%;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.template-tabs button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.template-tabs button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.prefund-content {
+    display: none;
+    padding: 6px 12px;
+    /*border: 1px solid #ccc; */
+    border-top: none;
+}
+
+#prefund-btn {
+    padding-left: 40.6095px;
+    padding-right: 40.6095px;
+}
+#signing-btn {
+    padding-left: 52.8985px;
+    padding-right: 52.8985px;
+}
+#missing-docs-btn {
+    padding-left: 32.836px;
+    padding-right: 32.836px;
+}
+#wealth-btn {
+    padding-left: 54.5935px;
+    padding-right: 54.5935px;
+}
+#product-select-btn {
+    padding-left: 28.75px;
+    padding-right: 28.75px;
+}
+#voe-btn {
+    padding-left: 64.453px;
+    padding-right: 64.453px;
+}
+#mortgage-btn {
+    padding-left: 44.461px;
+    padding-right: 44.461px;
+}
+
+#custom-notes-btn {
+    padding-left: 29.1795px;
+    padding-right: 29.1795px;
+}
+
+.outbound-tab-content {
+    background-color: #D9D9D9;
+}
+
+.outbound-phone-num-tb {
+    margin: 10px auto;
+}
+#borrower-not-avail-btn-prefund,
+#borrower-not-avail-btn-signing,
+#borrower-not-avail-btn-missing-docs,
+#borrower-not-avail-btn-prod-sel,
+#borrower-not-avail-btn-voe,
+#borrower-not-avail-btn-mortgage {
+    padding-left: 65.133px;
+    padding-right: 65.133px;
+}
+#system-vm-btn-prefund,
+#system-vm-btn-signing,
+#system-vm-btn-missing-docs,
+#system-vm-btn-prod-sel,
+#system-vm-btn-voe,
+#system-vm-btn-mortgage {
+    padding-left: 69.8435px;
+    padding-right: 69.8435px;
+}
+#agent-vm-btn-prefund,
+#agent-vm-btn-signing,
+#agent-vm-btn-missing-docs,
+#agent-vm-btn-prod-sel,
+#agent-vm-btn-voe,
+#agent-vm-btn-mortgage{
+    padding-left: 73.8515px;
+    padding-right: 73.8515px;
+}
+
+/**** Prefunding ****/
+
+
+#prefunding-complete-btn {
+    padding-left: 71.664px;
+    padding-right: 71.664px;
+}
+
+
+#extra-notes-prefund {
+    margin-bottom: 10px;
+}
+
+
+/**** Signing ****/
+
+#signing-complete-btn {
+    padding-left: 83.961px;
+    padding-right: 83.961px;
+}
+#still-thinking-btn-signing {
+    padding-left: 67.2385px;
+    padding-right: 67.2385px;
+}
+#didnt-verify-btn-signing,
+#didnt-verify-btn-missing-docs {
+    padding-left: 72.664px;
+    padding-right: 72.664px;
+}
+
+
+/**** Missing Docs ****/
+
+#missing-docs-complete-btn {
+    padding-left: 63.8905px;
+    padding-right: 63.8905px;
+}
+
+/**** Wealth ****/
+
+#wealth-signing-complete-btn {
+    padding-left: 59.109px;
+    padding-right: 59.109px;
+}
+#signing-investor-not-avail-btn {
+    padding-left: 40.5155px;
+    padding-right: 40.5155px;
+}
+#signing-system-vm-btn {
+    padding-left: 41.789px;
+    padding-right: 41.789px;
+}
+#signing-agent-vm-btn {
+    padding-left: 45.5625px;
+    padding-right: 45.5625px;
+}
+#wealth-funding-complete-btn {
+    padding-left: 56.867px;
+    padding-right: 56.867px;
+}
+#funding-investor-not-avail-btn {
+    padding-left: 38.2735px;
+    padding-right: 38.2735px;
+}
+#funding-system-vm-btn {
+    padding-left: 39.5465px;
+    padding-right: 39.5465px;
+}
+#funding-agent-vm-btn {
+    padding-left: 43.32px;
+    padding-right: 43.32px;
+}
+
+/**** Product Select ****/
+
+#product-select-complete-mf-btn {
+    padding-left: 57.617px;
+    padding-right: 57.617px;
+}
+#product-select-complete-wa-btn {
+    padding-left: 57.617px;
+    padding-right: 57.617px;
+}
+
+/**** VOE ****/
+
+#voe-complete-btn {
+    padding-left: 95.508px;
+    padding-right: 95.508px;
+}
+
+/**** Mortgage ****/
+
+#mortgage-complete-btn {
+    padding-left: 52.367px;
+    padding-right: 52.367px;
+}
+#mortgage-withdraw-btn {
+    padding-left: 52.625px;
+    padding-right: 52.625px;
+}
+/**** Custom Notes ****/
+
+.contact-ddl {
+    margin: 10px auto;
+}
+.custom-notes-btn-container {
+    margin-top: 20px;
+}
+
+/**************************************************/
+/******** Chat ************************************/
+/**************************************************/
+
+.pick-color-text {
+    margin-top: 10px;
+}
+.color-picker-ddl {
+    margin: 5px auto 10px auto;
+    min-width: 150px;
+}
+.title-verified {
+    margin-bottom: 10px;
+}
+.why-not-verify-div {
+    margin-top: 7px;
+}
+
+
+/**** CHAT TABS ****/
+
+/* Style the buttons that are used to open the tab content */
+.chat-tabs button {
+    padding: 14px 36.7345px;
+}
+#color-bar {
+    background-color: #00B8F1;
+    overflow: hidden;
+    width: 100%;
+    height: 10px;
+}
+.chat-button-color-bar {
+    background-color: #00B8F1;
+    height: 10px;
+    width: 106px;
+    float: left;
+    border: none;
+    outline: none;
+}
+
+
+/*************************/
+/******* Snackbar *******/
+/*************************/
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#copy-snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    top: 40px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#copy-snackbar.show {
+    visibility: visible; /* Show the snackbar */
+
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {top: 0; opacity: 0;} 
+    to {top: 40px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 40px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {top: 40px; opacity: 1;} 
+    to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {top: 40px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#reset-snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    top: 40px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#reset-snackbar.show {
+    visibility: visible; /* Show the snackbar */
+
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {top: 0; opacity: 0;} 
+    to {top: 40px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {top:40px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {top: 40px; opacity: 1;} 
+    to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {top: 40px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+}

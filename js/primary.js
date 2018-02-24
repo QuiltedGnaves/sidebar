@@ -7,7 +7,10 @@
 var calledFrom = " Called from: ";
 var numCalled = " Number called: ";
 var verifiedBwr = " Verified Bwr. ";
-var notVerified = " Bwr not verified. ";
+
+$("#reset-all").on("click", function() {
+    resetAll();
+});
 
 
 //***************************
@@ -41,6 +44,7 @@ function setDdlBgColor(whichChat, colorChoice) {
     $.each(colors, function(name, hex) {
         if(colorChoice == name) {
             $("#color-picker-" + whichChat).css("background-color", hex);
+            $("#" + whichChat + "-chat-color-bar").css("background-color", hex);
             return false;
         }
     });
@@ -49,7 +53,7 @@ function setDdlBgColor(whichChat, colorChoice) {
 
 //**** Copy to Clipboard ****
 function copyToClipboard(notes) {
-    alert("In copyToClipboard");
+    
     var tempTextarea = document.getElementById("temp-textarea");
     
     // Clear text area
@@ -83,7 +87,7 @@ function copySnackbar() {
     x.className = "show";
 
     // After 3 seconds, remove the show class from DIV
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2500);
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 750);
 }
 
 function resetSnackbar() {
@@ -94,7 +98,7 @@ function resetSnackbar() {
     x.className = "show";
 
     // After 2.5 seconds, remove the show class from DIV
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2500);
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 750);
 }
 
 //**** Format Outbound Templates ****
@@ -109,7 +113,121 @@ function formatTemplate(template, templateKey, phoneNumTb, callCode) {
 function getPhoneNum(number) {
     return $(number).val();
 }
-//$('textarea').autoResize();
+
+//**** Format Chat Notes function ****
+function formatChatNotes(whichChat) {
+    
+    var wasVerified = "";
+    var $question = $("#question-chat-" + whichChat).val();
+    var $notes = $("#notes-chat-" + whichChat).val();
+    
+    if($("#verify-no-" + whichChat).is(":checked")){
+        if($("#general-question-cb-" + whichChat).is(":checked")) {
+            wasVerified = "ICC-SC-TB: Not verified because general questions asked. ";
+        } else if($("#other-cb-" + whichChat).is(":checked")) {
+            wasVerified = "ICC-SC-TB: Not verified because " + $("#other-tb-" + whichChat).val() + ". ";
+        } else {
+            wasVerified = "ICC-SC-TB: Not Verified";
+        }
+    } else {
+        wasVerified = "ICC-SC-TB: Bwr verified. ";
+    }
+    
+    var formattedNotes =  wasVerified + "\n\n" + "Question: " + $question + "\n\n" + "Notes: " + $notes;
+    
+    return copyToClipboard(formattedNotes);
+}
+
+function resetInbound() {
+    resetSnackbar();
+    $(".clear-form-inbound").val("");
+    $("#question-inbound").height(63);
+    $("#notes-inbound").height(110);
+    $(".verify-checkbox-input-inbound").prop("checked", false);
+    $(".inbound-to-hide").hide();
+    $("#ddl-inbound").get(0).selectedIndex = 0;
+}
+
+function resetOutbound(whichOne) {
+    
+    resetSnackbar();
+    
+    if(whichOne != "all") {
+        $("#" + whichOne + "-phone-number").val("");
+    } else {
+        $("." + whichOne + "-phone-number").val("");
+    }
+    
+    if( $("#inbound-pf-checkbox").is(":checked") || $("#outbound-pf-checkbox").is(":checked") || $("#extra-autopay-checkbox").is(":checked") || $("#extra-notes-checkbox").is(":checked")) {
+        $("#inbound-pf-checkbox").prop("checked", false);
+        $("#outbound-pf-checkbox").prop("checked", false);
+        $("#extra-autopay-checkbox").prop("checked", false);
+        $("#prefund-extra-autopay-amount").val("");
+        $(".extra-autopay-amount-div").hide();
+        $("#extra-notes-checkbox").prop("checked", false);
+        $("#extra-notes-prefund").val("");
+        $("#extra-notes-prefund").height(110);
+        $(".prefund-extra-notes-div").hide();
+    }
+}
+
+function resetCustomOutbound() {
+    
+    resetSnackbar();
+    $("#custom-phone-num").val("");
+    $("#custom-extra-notes").val("");
+    $("#custom-extra-notes").height(110);
+    $("#contact-type-ddl-outbound").get(0).selectedIndex = 0;
+    $("#contact-person-ddl-outbound").get(0).selectedIndex = 0;
+    $("#call-number-ddl-outbound").get(0).selectedIndex = 0;
+}
+
+function resetChat(whichChat) {
+    
+    if(whichChat == "all") {
+        $(".reset-all-cb").prop("checked", false);
+        $(".chat-tb").val("");
+        $(".color-picker-ddl").get(0).selectedIndex = 0;
+        $(".color-picker-ddl").attr("style", "");
+        $(".chat-button-color-bar").attr("style", "");
+        $(".question-tb").height(63);
+        $(".notes-tb").height(110);
+        $(".why-not-div").hide();
+        $(".tb-div-other").hide();
+    } else {
+            if($("#verify-yes-" + whichChat).is(":checked")) {
+            $("#verify-yes-" + whichChat).prop("checked", false);
+        } else if($("#verify-no-" + whichChat).is(":checked")) {
+            $("#verify-no-" + whichChat).prop("checked", false);
+            $("#general-question-cb-" + whichChat).prop("checked", false);
+            $("#other-cb-" + whichChat).prop("checked", false);
+            $("#other-tb-" + whichChat).val("");
+        } else {
+            
+        }
+        
+        $("#color-picker-" + whichChat).get(0).selectedIndex = 0;
+        $("#color-picker-" + whichChat).attr("style", "");
+        $("#" + whichChat + "-chat-color-bar").attr("style", "");
+        $("#question-chat-" + whichChat).val("");
+        $("#question-chat-" + whichChat).height(63);
+        $("#notes-chat-" + whichChat).val("");
+        $("#notes-chat-" + whichChat).height(110);
+        $("#tb-div-other-" + whichChat).hide();
+        $("#why-not-div-" + whichChat).hide();
+    }
+    
+    
+}
+
+function resetAll() {
+    resetInbound();
+    resetOutbound("all");
+    resetCustomOutbound();
+    resetChat("all");
+    
+    $("#chat-tabs-wrapper").sortable("refreshPositions");
+}
 
 //***************************
 //******** Variables ********
@@ -202,10 +320,13 @@ $("input[type='checkbox'][id='verify-num-on-file-yes-checkbox-inbound']").change
         $("#verify-dob-div").show();
         $("#verify-ssn-div").show();
         $(".separator").show();
+        $("#verify-num-on-file-no-checkbox-inbound").prop("checked", false);
+        $("#verify-address-div").hide();
     } else {
         $("#verify-fullname-div").hide();
         $("#verify-dob-div").hide();
         $("#verify-ssn-div").hide();
+        $("#verify-address-div").hide();
         $(".separator").hide();
     }
 });
@@ -218,6 +339,7 @@ $("input[type='checkbox'][id='verify-num-on-file-no-checkbox-inbound']").change(
         $("#verify-ssn-div").show();
         $("#verify-address-div").show();
         $(".separator").show();
+        $("#verify-num-on-file-yes-checkbox-inbound").prop("checked", false);
     } else {
         $("#verify-fullname-div").hide();
         $("#verify-dob-div").hide();
@@ -240,7 +362,7 @@ $("#copy-btn-inbound").on('click', function() {
 
 //**** Reset inbound ****
 $("#reset-btn-inbound").on('click', function() {
-    
+    resetInbound();
 });
 
 //*******************************
@@ -275,6 +397,40 @@ customNotesBtn.addEventListener('click', function() {
 
 //**** Set Outbound to Default ****
 document.getElementById('custom-notes-btn').click();
+
+//**** Outbound page resets ****
+
+$("#reset-prefund").on("click", function() {
+    resetOutbound("prefund");
+});
+
+$("#reset-signing").on("click", function() {
+    resetOutbound("signing");
+});
+
+$("#reset-missing-docs").on("click", function() {
+    resetOutbound("missing-docs");
+});
+
+$("#reset-wealth").on("click", function() {
+    resetOutbound("wealth");
+});
+
+$("#reset-prod-sel").on("click", function() {
+    resetOutbound("product-select");
+});
+
+$("#reset-voe").on("click", function() {
+    resetOutbound("voe");
+});
+
+$("#reset-mortgage").on("click", function() {
+    resetOutbound("mortgage");
+});
+
+$("#reset-btn-custom-notes").on("click", function() {
+    resetCustomOutbound();
+})
 
 
 //********************
@@ -359,15 +515,15 @@ $("#copy-btn-prefund-complete").on("click", function() {
     
     if(extraACH != "") {
         if(extraNotes != "") {
-            notes = inOrOut + " " + calledFrom + phoneNum + ". " + prefundingTemplates["prefundComplete"] + extraACH + extraNotes;
+            notes = inOrOut + calledFrom + phoneNum + ". " + prefundingTemplates["prefundComplete"] + extraACH + extraNotes;
         } else {
-            notes = inOrOut + " " + calledFrom + phoneNum + ". " + prefundingTemplates["prefundComplete"] + extraACH;    
+            notes = inOrOut + calledFrom + phoneNum + ". " + prefundingTemplates["prefundComplete"] + extraACH;    
         }
         
     } else if(extraNotes != "") {
-        notes = inOrOut + " " + calledFrom + phoneNum + ". " + prefundingTemplates["prefundComplete"] + extraNotes;
+        notes = inOrOut + calledFrom + phoneNum + ". " + prefundingTemplates["prefundComplete"] + extraNotes;
     } else {
-        notes = inOrOut + " " + calledFrom + phoneNum + ". " + prefundingTemplates["prefundComplete"];
+        notes = inOrOut + calledFrom + phoneNum + ". " + prefundingTemplates["prefundComplete"];
     }
     
     copyToClipboard(notes);
@@ -397,7 +553,7 @@ $("#agent-vm-btn-prefund").on("click", function() {
 var signingTemplates = {
     "signingComplete" : "Signing reminder call. Asked if there were questions or concerns about signing. The applicant will sign.",
     "bwrStillThinking" : "Signing reminder call. Asked if there were questions or concerns about signing. The applicant is still thinking.",
-    "didntVerify" : "Signing reminder call. The applicant did not verify.",
+    "didntVerify" : "Signing reminder call. The applicant did not want to verify.",
     "bwrNotAvail" : "Signing reminder call. The applicant was not available to speak.",
     "sysVM" : "Signing reminder call. No answer. System left VM.",
     "agentVM" : "Signing reminder call. No answer. I left VM."
@@ -444,7 +600,7 @@ $("#agent-vm-btn-signing").on("click", function() {
 
 var missingDocTemplates = {
     "missingDocComplete" : "Missing docs call. Asked if they needed help uploading docs or if they had any questions. They will upload docs soon.",
-    "didntVerify" : "Missing docs call. The applicant did not verify.",
+    "didntVerify" : "Missing docs call. The applicant did not want to verify.",
     "bwrNotAvail" : "Missing docs call. The applicant was not available to speak.",
     "sysVM" : "Missing docs call. No answer. System left VM.",
     "agentVM" : "Missing docs call. No answer. I left VM."
@@ -509,7 +665,7 @@ $("#signing-investor-not-avail-btn").on("click", function() {
 
 $("#signing-system-vm-btn").on("click", function() {
     var phoneNum = getWealthNumber();
-    formatTemplate(wealthTemplates, "sysVm", phoneNum, "OCC-C-VM");
+    formatTemplate(wealthTemplates, "sysVM", phoneNum, "OCC-C-VM");
 });
 
 $("#signing-agent-vm-btn").on("click", function() {
@@ -529,7 +685,7 @@ $("#funding-investor-not-avail-btn").on("click", function() {
 
 $("#funding-system-vm-btn").on("click", function() {
     var phoneNum = getWealthNumber();
-    formatTemplate(wealthTemplates, "sysVm", phoneNum, "OCC-C-VM");
+    formatTemplate(wealthTemplates, "sysVM", phoneNum, "OCC-C-VM");
 });
 
 $("#funding-agent-vm-btn").on("click", function() {
@@ -550,29 +706,33 @@ var productSelTemplates = {
 };
 
 //**** Get wealth phone number ****
-function getWealthNumber() {
-    return getPhoneNum($("#wealth-phone-number"));
+function getProdSelNumber() {
+    return getPhoneNum($("#product-select-phone-number"));
 }
-var $productSelPhoneNum = $("#product-select-phone-number").val();
 
 $("#product-select-complete-mf-btn").on("click", function() {
-    formatTemplate(productSelTemplates, "prodSelCompForward", $productSelPhoneNum, "OCC-C-TB");
+    var phoneNum = getProdSelNumber();
+    formatTemplate(productSelTemplates, "prodSelCompForward", phoneNum, "OCC-C-TB");
 });
 
 $("#product-select-complete-wa-btn").on("click", function() {
-    formatTemplate(productSelTemplates, "prodSelCompWithdraw", $productSelPhoneNum, "OCC-C-TB");
+    var phoneNum = getProdSelNumber();
+    formatTemplate(productSelTemplates, "prodSelCompWithdraw", phoneNum, "OCC-C-TB");
 });
 
 $("#borrower-not-avail-btn-prod-sel").on("click", function() {
-    formatTemplate(productSelTemplates, "bwrNotAvail", $productSelPhoneNum, "OCC-C-TB");
+    var phoneNum = getProdSelNumber();
+    formatTemplate(productSelTemplates, "bwrNotAvail", phoneNum, "OCC-C-TB");
 });
 
 $("#system-vm-btn-prod-sel").on("click", function() {
-    formatTemplate(productSelTemplates, "sysVM", $productSelPhoneNum, "OCC-C-VM");
+    var phoneNum = getProdSelNumber();
+    formatTemplate(productSelTemplates, "sysVM", phoneNum, "OCC-C-VM");
 });
 
 $("#agent-vm-btn-prod-sel").on("click", function() {
-    formatTemplate(productSelTemplates, "agentVM", $productSelPhoneNum, "OCC-C-VM");
+    var phoneNum = getProdSelNumber();
+    formatTemplate(productSelTemplates, "agentVM", phoneNum, "OCC-C-VM");
 });
 
 //********************
@@ -658,11 +818,11 @@ $("#agent-vm-btn-mortgage").on("click", function() {
 //********************
 
 $("#copy-btn-custom-notes").on('click', function() {
-    var $phoneNum = $("#outbound-phone-num-tb").val();
+    var $phoneNum = $("#custom-phone-num").val();
     var $contactType = $("#contact-type-ddl-outbound option:selected").attr("value");
     var $contactPerson = $("#contact-person-ddl-outbound option:selected").attr("value");
     var $callNum = $("#call-number-ddl-outbound option:selected").attr("value");
-    var $notes = $("#extra-notes").val();
+    var $notes = $("#custom-extra-notes").val();
     
     var formattedNotes = $contactType + "-C-" + $callNum + "-" + $contactPerson + numCalled + $phoneNum + verifiedBwr + $notes;
     
@@ -689,6 +849,7 @@ rightChatBtn.addEventListener('click', function() {
 document.getElementById('left-chat-tab-btn').click();
 
 var colors = {
+    "starting" : "#FFF",
     "pompadour" : "#6C0063",
     "vivid-violet" : "#7F3F97",
     "vin-rouge" : "#943C62",
@@ -733,7 +894,6 @@ $.each(colors, function(name, hex) {
 $(".color-picker-ddl").html(tempColors);
 
 //**** Set BG of DDL after color chosen ***
-
 $("#color-picker-left").change(function() {
     var currentColor = $(this).val();
     setDdlBgColor("left", currentColor);
@@ -747,12 +907,19 @@ $("#color-picker-right").change(function() {
     setDdlBgColor("right", currentColor);
 });
 
+//**** Sortable Chat buttons ***
+$ (function () {
+    $("#chat-tabs-wrapper").sortable({
+        revert: true
+    });
+});
+
 //**** Chat Show/Hide Why Not Textbox ****
 
 $(".why-not-div").hide();
 $(".tb-div-other").hide();
 
-//**** Left ****
+//**** Left S/H ****
 
 var verifyYesLeft = $("input[type='checkbox'][id='verify-yes-left']");
 var verifyNoLeft = $("input[type='checkbox'][id='verify-no-left']");
@@ -799,7 +966,7 @@ $(otherLeft).change(function() {
     }
 });
 
-//**** Middle ****
+//**** Middle S/H ****
 
 var verifyYesMiddle = $("input[type='checkbox'][id='verify-yes-middle']");
 var verifyNoMiddle = $("input[type='checkbox'][id='verify-no-middle']");
@@ -846,7 +1013,7 @@ $(otherMiddle).change(function() {
     }
 });
 
-//**** Right ****
+//**** Right S/H ****
 
 var verifyYesRight = $("input[type='checkbox'][id='verify-yes-right']");
 var verifyNoRight = $("input[type='checkbox'][id='verify-no-right']");
@@ -893,8 +1060,30 @@ $(otherRight).change(function() {
     }
 });
 
-// //******** Draggable Chat Tabs *****
-// $(document).ready( function () {
-    
-//     $("#left-chat-tab").draggable();
-// });
+//**** Copy Notes Chat ****
+
+$("#copy-btn-left").on("click", function() {
+    formatChatNotes("left");
+});
+
+$("#copy-btn-middle").on("click", function() {
+    formatChatNotes("middle");
+});
+
+$("#copy-btn-right").on("click", function() {
+    formatChatNotes("right");
+});
+
+//**** Reset Chats ****
+
+$("#reset-left").on("click", function() {
+    resetChat("left");
+});
+
+$("#reset-middle").on("click", function() {
+    resetChat("middle");
+});
+
+$("#reset-right").on("click", function() {
+    resetChat("right");
+});

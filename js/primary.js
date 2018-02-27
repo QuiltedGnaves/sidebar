@@ -190,6 +190,7 @@ function resetChat(whichChat) {
         $(".color-picker-ddl").get(0).selectedIndex = 0;
         $(".color-picker-ddl").attr("style", "");
         $(".chat-button-color-bar").attr("style", "");
+        $(".chat-name-div").attr("style", "");
         $(".question-tb").height(63);
         $(".notes-tb").height(110);
         $(".why-not-div").hide();
@@ -206,6 +207,7 @@ function resetChat(whichChat) {
             
         }
         
+        $("#name-on-chat-div-" + whichChat).val("");
         $("#color-picker-" + whichChat).get(0).selectedIndex = 0;
         $("#color-picker-" + whichChat).attr("style", "");
         $("#" + whichChat + "-chat-color-bar").attr("style", "");
@@ -933,8 +935,10 @@ $(verifyYesLeft).change(function() {
         $(otherLeft).prop("checked", false);
         $("#tb-div-other-left").hide();
         $("#why-not-div-left").hide();
+        $("#verify-checkbox-yes-left").css("background-color", "#A2FFA7");
+        $("#verify-checkbox-no-left").css("background-color", "");
     } else {
-        
+        $("#verify-checkbox-yes-left").css("background-color", "");
     }
 });
 
@@ -942,8 +946,11 @@ $(verifyNoLeft).change(function() {
     if($(this).is(":checked")) {
         $("#why-not-div-left").show();
         $(verifyYesLeft).prop("checked", false);
+        $("#verify-checkbox-no-left").css("background-color", "#ffaca3");
+        $("#verify-checkbox-yes-left").css("background-color", "");
     } else {
        $("#why-not-div-left").hide(); 
+       $("#verify-checkbox-no-left").css("background-color", "");
     }
 });
 
@@ -980,8 +987,10 @@ $(verifyYesMiddle).change(function() {
         $(otherMiddle).prop("checked", false);
         $("#tb-div-other-middle").hide();
         $("#why-not-div-middle").hide();
+        $("#verify-checkbox-yes-middle").css("background-color", "#A2FFA7");
+        $("#verify-checkbox-no-middle").css("background-color", "");
     } else {
-        
+        $("#verify-checkbox-yes-middle").css("background-color", "");
     }
 });
 
@@ -989,8 +998,11 @@ $(verifyNoMiddle).change(function() {
     if($(this).is(":checked")) {
         $("#why-not-div-middle").show();
         $(verifyYesMiddle).prop("checked", false);
+        $("#verify-checkbox-no-middle").css("background-color", "#ffaca3");
+        $("#verify-checkbox-yes-middle").css("background-color", "");
     } else {
-       $("#why-not-div-middle").hide(); 
+       $("#why-not-div-middle").hide();
+       $("#verify-checkbox-no-middle").css("background-color", "");
     }
 });
 
@@ -1027,8 +1039,10 @@ $(verifyYesRight).change(function() {
         $(otherRight).prop("checked", false);
         $("#tb-div-other-right").hide();
         $("#why-not-div-right").hide();
+        $("#verify-checkbox-yes-right").css("background-color", "#A2FFA7");
+        $("#verify-checkbox-no-right").css("background-color", "");
     } else {
-        
+        $("#verify-checkbox-yes-right").css("background-color", "");
     }
 });
 
@@ -1036,8 +1050,11 @@ $(verifyNoRight).change(function() {
     if($(this).is(":checked")) {
         $("#why-not-div-right").show();
         $(verifyYesRight).prop("checked", false);
+        $("#verify-checkbox-no-right").css("background-color", "#ffaca3");
+        $("#verify-checkbox-yes-right").css("background-color", "");
     } else {
-       $("#why-not-div-right").hide(); 
+       $("#why-not-div-right").hide();
+       $("#verify-checkbox-no-right").css("background-color", "");
     }
 });
 

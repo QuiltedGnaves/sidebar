@@ -372,6 +372,14 @@ input[type='checkbox'] {
 .why-not-verify-div {
     margin-top: 7px;
 }
+.chat-name-div {
+    margin: 10px 0 15px;
+}
+.verify-checkbox-yes,
+.verify-checkbox-no {
+    max-width: 168px;
+    margin: 0px;
+}
 
 
 /**** CHAT TABS ****/

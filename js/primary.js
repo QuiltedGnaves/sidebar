@@ -195,6 +195,8 @@ function resetChat(whichChat) {
         $(".notes-tb").height(110);
         $(".why-not-div").hide();
         $(".tb-div-other").hide();
+        $(".verify-checkbox-yes").css("background-color", "");
+        $(".verify-checkbox-no").css("background-color", "");
     } else {
             if($("#verify-yes-" + whichChat).is(":checked")) {
             $("#verify-yes-" + whichChat).prop("checked", false);

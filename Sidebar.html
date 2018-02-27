@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meat name="theme-color" content="#15c0f1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SoFi Sidebar</title>
+	
+	<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/ico" href="img/favicon.ico" sizes="16x16" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://rawgit.com/QuiltedGnaves/sidebar/master/css/style.css">
+	
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+<section class="section" id="main-section">
+  <div class="columns is-centered" id="primary-column">
+      <div class="column max-width-to-parent">
+          <div class="column_for_width  max-width-to-parent">
+              <div class="hero is-primary max-width-to-parent" id="main-banner">
+                  <div class="hero-body">
+                      <div class="container">
+                      	<h1 class="title" id="banner-title">
+                      	    SoFi Sidebar
+                      	</h1>
+                      </div>
+          	    </div>
+          	</div>
+          	<div class="main-tabs">
+          	    <button class="main-tab-links" id="inbound-btn" >Inbound</button>
+          	    <button class="main-tab-links" id="outbound-btn" >Outbound</button>
+          	    <button class="main-tab-links" id="chat-btn" >Chat</button>
+          	</div>
+          	
+          	
+          	
+          	
+          	
+          	<!--
+              *************
+              INBOUND PAGE 
+              *************
+              -->
+          	<div id="inbound-content" class="main-tab-content">
+              	<div class="control container textboxes ">
+                      <input class="input clear-form-all clear-form-inbound" type="text" placeholder="First Name"> 
+                </div>
+                <div class="control container textboxes">
+                    <input class="input clear-form-all clear-form-inbound" type="text" placeholder="Last Name">
+                </div>
+                <div class="control container textboxes">
+                    <input class="input clear-form-all clear-form-inbound" type="text" placeholder="Email Address">
+                </div>
+                <div class="control container textboxes">
+                    <input id="called-from-number" class="input clear-form-all clear-form-inbound" type="text" placeholder="Phone Number">
+                </div>
+                <div class="container">
+                    <h2 class="title is-4 verify-title">Verification List:</h2>
+                </div>
+                <div class="container">
+                    <h2 class="title is-6 verify-title">Calling from number on file?</h2>
+                </div>
+                <div class="container verify-checkbox" id="verify-num-on-file-yes-div">
+                    <input type="checkbox" class="checkbox verify-checkbox-input-inbound" id="verify-num-on-file-yes-checkbox-inbound" name="verify-num-on-file-yes-checkbox" />
+                    <label for="verify-num-on-file-yes-checkbox">Yes</label>
+                </div>
+                <div class="container verify-checkbox" id="verify-num-on-file-no-div">
+                    <input type="checkbox" class="checkbox verify-checkbox-input-inbound" id="verify-num-on-file-no-checkbox-inbound" name="verify-num-on-file-no-checkbox" />
+                    <label for="verify-num-on-file-no-checkbox">No</label>
+                </div>
+                <div class="separator"></div>
+                <div class="container verify-checkbox inbound-to-hide" id="verify-fullname-div">
+                    <input type="checkbox" class="checkbox verify-checkbox-input-inbound" id="verify-fullname-checkbox-inbound" name="verify-fullname-checkbox" />
+                    <label for="verify-fullname-checkbox">Full Name</label>
+                </div>
+                <div class="container verify-checkbox inbound-to-hide" id="verify-ssn-div">
+                    <input type="checkbox" class="checkbox verify-checkbox-input-inbound" id="verify-ssn-checkbox-inbound" name="verify-ssn-checkbox" />
+                    <label for="verify-ssn-checkbox">SSN</label>
+                </div>
+                <div class="container verify-checkbox inbound-to-hide" id="verify-dob-div">
+                    <input type="checkbox" class="checkbox verify-checkbox-input-inbound" id="verify-dob-checkbox-inbound" name="verify-dob-checkbox" />
+                    <label for="verify-dob-checkbox">DOB</label>
+                </div>
+                <div class="container verify-checkbox inbound-to-hide" id="verify-address-div">
+                    <input type="checkbox" class="checkbox verify-checkbox-input-inbound" id="verify-address-checkbox-inbound" name="verify-address-checkbox" />
+                    <label for="verify-address-checkbox">Address</label>
+                </div>
+                <div class="container question-container">
+                    <textarea rows="3" cols="35" id="question-inbound" class="question-tb inbound-textarea clear-form-inbound" placeholder="Question..."></textarea>
+                </div>
+                <div class="container notes-container">
+                    <textarea rows="6" cols="35" id="notes-inbound" class="notes-tb inbound-textarea clear-form-inbound" placeholder="Notes..."></textarea>
+                </div>
+                <div class="container contact-ddl">
+                    <label for="ddl-inbound" datalabel="contact-type-ddl">Contact Type:</label><br />
+                        <select id="ddl-inbound" class="contact-type-ddl">
+                            <option value="ICC">ICC - Inbound Customer Comm</option>
+                            <option value="IEV">IEV - Inbound Employment Verify</option>
+                        </select>
+                </div>
+                <div class="field is-grouped container button-container">
+                    <button class="button is-primary copy-btn" id="copy-btn-inbound" value="Copy">Copy</button>
+                    <button class="button is-warning reset-btn" id="reset-btn-inbound" value="Reset">Reset</button>
+                </div>
+              </div>
+              
+              <!--
+              *************
+              OUTBOUND PAGE 
+              *************
+              -->
+              <div id="outbound-content" class="main-tab-content">
+                <div class="outbound-tabs">
+                    <button id="prefund-btn" class="outbound-tab-links">Prefunding</button>
+                    <button id="signing-btn" class="outbound-tab-links">Signing</button>
+                </div>
+                <div class="outbound-tabs">
+                    <button id="missing-docs-btn" class="outbound-tab-links">Missing Docs</button>
+                    <button id="wealth-btn" class="outbound-tab-links">Wealth</button>
+                </div>
+                <div class="outbound-tabs">
+                    <button id="product-select-btn" class="outbound-tab-links">Product Select</button>
+                    <button id="voe-btn" class="outbound-tab-links">VOE</button>
+                </div>
+                <div class="outbound-tabs">
+                    <button id="mortgage-btn" class="outbound-tab-links">Mortgage</button>
+                    <button id="custom-notes-btn" class="outbound-tab-links">Custom Notes</button>
+                </div>
+                
+                <div id="prefund-content" class="outbound-tab-content">
+                    <div class="control container textboxes outbound-phone-num-tb">
+                        <input id="prefund-phone-number" class="input all-phone-number" type="text" placeholder="Phone Number">
+                    </div>
+                    <div class="template-tabs">
+                      <button id="prefunding-complete-btn" class="prefunding-tab-links">Prefunding Complete</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="borrower-not-avail-btn-prefund" class="prefunding-tab-links">Borrower Not Available</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="system-vm-btn-prefund" class="prefunding-tab-links">System Left Voicemail</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="agent-vm-btn-prefund" class="prefunding-tab-links">Agent Left Voicemail</button>
+                    </div>
+                    
+                    <div class="prefund-content">
+                        <div class="container inbound-checkbox" id="inbound-pf-checkbox-div">
+                            <input type="checkbox" class="checkbox" id="inbound-pf-checkbox"/>
+                            <label for="inbound-pf-checkbox">Inbound Call</label>
+                        </div>
+                        <div class="container inbound-checkbox" id="outbound-pf-checkbox-div">
+                            <input type="checkbox" class="checkbox" id="outbound-pf-checkbox"/>
+                            <label for="outbound-pf-checkbox">Outbound Call</label>
+                        </div>
+                        <div class="container extra-autopay-checkbox" id="extra-autopay-checkbox-div">
+                            <input type="checkbox" class="checkbox" id="extra-autopay-checkbox"/>
+                            <label for="extra-autopay-checkbox">Extra Auto-pay?</label>
+                        </div>
+                        <div class="control container textboxes extra-autopay-amount-div">
+                            <input id="prefund-extra-autopay-amount" class="input clear-form-all clear-form-outbound" type="text" placeholder="Extra Auto-pay Amount">
+                        </div>
+                        <div class="container extra-notes-checkbox" id="extra-notes-checkbox-div">
+                            <input type="checkbox" class="checkbox" id="extra-notes-checkbox"/>
+                            <label for="extra-notes-checkbox">Extra Notes?</label>
+                        </div>
+                        <div class="container notes-container prefund-extra-notes-div" id="prefund-extra-notes-div">
+                            <textarea rows="6" cols="35" id="extra-notes-prefund" class="notes-tb" placeholder="Notes..."></textarea>
+                        </div>
+                        <div class="field is-grouped container button-container">
+                            <button class="button is-primary copy-btn" id="copy-btn-prefund-complete" value="Copy">Copy</button>
+                        </div>
+                    </div>
+                    <button class="button is-warning reset-btn reset-btn-outbound" id="reset-prefund" value="Reset">Reset</button>
+                    
+                </div>
+                
+                <div id="signing-content" class="outbound-tab-content">
+                    <div class="control container textboxes outbound-phone-num-tb">
+                        <input id="signing-phone-number" class="input all-phone-number" type="text" placeholder="Phone Number">
+                    </div>
+                    <div class="template-tabs">
+                      <button id="signing-complete-btn" class="signing-tab-links">Signing Complete</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="still-thinking-btn-signing" class="signing-tab-links">Borrower Still Thinking</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="didnt-verify-btn-signing" class="signing-tab-links">Didn't Want to Verify</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="borrower-not-avail-btn-signing" class="signing-tab-links">Borrower Not Available</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="system-vm-btn-signing" class="signing-tab-links">System Left Voicemail</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="agent-vm-btn-signing" class="signing-tab-links">Agent Left Voicemail</button>
+                    </div>
+                    <button class="button is-warning reset-btn reset-btn-outbound" id="reset-signing" value="Reset">Reset</button>
+                </div>
+                
+                <div id="missing-docs-content" class="outbound-tab-content">
+                    <div class="control container textboxes outbound-phone-num-tb">
+                        <input id="missing-docs-phone-number" class="input all-phone-number" type="text" placeholder="Phone Number">
+                    </div>
+                    <div class="template-tabs">
+                      <button id="missing-docs-complete-btn" class="missing-docs-tab-links">Missing Docs Complete</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="didnt-verify-btn-missing-docs" class="missing-docs-tab-links">Didn't Want to Verify</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="borrower-not-avail-btn-missing-docs" class="missing-docs-tab-links">Borrower Not Available</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="system-vm-btn-missing-docs" class="missing-docs-tab-links">System Left Voicemail</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="agent-vm-btn-missing-docs" class="missing-docs-tab-links">Agent Left Voicemail</button>
+                    </div>
+                    <button class="button is-warning reset-btn reset-btn-outbound" id="reset-missing-docs" value="Reset">Reset</button>
+                </div>
+                
+                <div id="wealth-content" class="outbound-tab-content">
+                    <div class="control container textboxes outbound-phone-num-tb">
+                        <input id="wealth-phone-number" class="input all-phone-number" type="text" placeholder="Phone Number">
+                    </div>
+                    <div class="template-tabs">
+                      <button id="wealth-signing-complete-btn" class="wealth-tab-links">Wealth Signing Compete</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="signing-investor-not-avail-btn" class="wealth-tab-links">Signing Investor Not Available</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="signing-system-vm-btn" class="wealth-tab-links">Signing System Left Voicemail</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="signing-agent-vm-btn" class="wealth-tab-links">Signing Agent Left Voicemail</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="wealth-funding-complete-btn" class="wealth-tab-links">Wealth Funding Compete</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="funding-investor-not-avail-btn" class="wealth-tab-links">Funding Investor Not Available</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="funding-system-vm-btn" class="wealth-tab-links">Funding System Left Voicemail</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="funding-agent-vm-btn" class="wealth-tab-links">Funding Agent Left Voicemail</button>
+                    </div>
+                    <button class="button is-warning reset-btn reset-btn-outbound" id="reset-wealth" value="Reset">Reset</button>
+                </div>
+                
+                <div id="product-select-content" class="outbound-tab-content">
+                    <div class="control container textboxes outbound-phone-num-tb">
+                        <input id="product-select-phone-number" class="input all-phone-number" type="text" placeholder="Phone Number">
+                    </div>
+                    <div class="template-tabs">
+                      <button id="product-select-complete-mf-btn" class="product-select-tab-links">Product Select Complete <br> Moving Forward</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="product-select-complete-wa-btn" class="product-select-tab-links">Product Select Complete <br> Withdraw App</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="borrower-not-avail-btn-prod-sel" class="product-select-tab-links">Borrower Not Available</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="system-vm-btn-prod-sel" class="product-select-tab-links">System Left Voicemail</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="agent-vm-btn-prod-sel" class="product-select-tab-links">Agent Left Voicemail</button>
+                    </div>
+                    <button class="button is-warning reset-btn reset-btn-outbound" id="reset-prod-sel" value="Reset">Reset</button>
+                </div>
+                
+                <div id="voe-content" class="outbound-tab-content">
+                    <div class="control container textboxes outbound-phone-num-tb">
+                        <input id="voe-phone-number" class="input all-phone-number" type="text" placeholder="Phone Number">
+                    </div>
+                    <div class="template-tabs">
+                      <button id="voe-complete-btn" class="voe-tab-links">VOE Complete</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="borrower-not-avail-btn-voe" class="voe-tab-links">Borrower Not Available</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="system-vm-btn-voe" class="voe-tab-links">System Left Voicemail</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="agent-vm-btn-voe" class="voe-tab-links">Agent Left Voicemail</button>
+                    </div>
+                    <button class="button is-warning reset-btn reset-btn-outbound" id="reset-voe" value="Reset">Reset</button>
+                </div>
+                
+                <div id="mortgage-content" class="outbound-tab-content">
+                    <div class="control container textboxes outbound-phone-num-tb">
+                        <input id="mortgage-phone-number" class="input all-phone-number" type="text" placeholder="Phone Number">
+                    </div>
+                    <div class="template-tabs">
+                      <button id="mortgage-complete-btn" class="mortgage-tab-links">Mortgage Select Complete</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="mortgage-withdraw-btn" class="mortgage-tab-links">Mortgage Select Withdraw</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="borrower-not-avail-btn-mortgage" class="mortgage-tab-links">Borrower Not Available</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="system-vm-btn-mortgage" class="mortgage-tab-links">System Left Voicemail</button>
+                    </div>
+                    <div class="template-tabs">
+                      <button id="agent-vm-btn-mortgage" class="mortgage-tab-links">Agent Left Voicemail</button>
+                    </div>
+                    <button class="button is-warning reset-btn reset-btn-outbound" id="reset-mortgage" value="Reset">Reset</button>
+                </div>
+                
+                <div id="custom-notes-content" class="outbound-tab-content">
+                    <div class="control container textboxes outbound-phone-num-tb">
+                        <input id="custom-phone-num" class="input" type="text" placeholder="Phone Number">
+                    </div>
+                    <div class="container notes-container">
+                        <textarea rows="6" cols="35" id="custom-extra-notes" class="notes-tb" placeholder="Notes..."></textarea>
+                    </div>
+                    <div class="container contact-ddl">
+                        <label for="contact-type-ddl" datalabel="contact-type-ddl">Contact Type:</label><br />    
+                            <select id="contact-type-ddl-outbound" class="ddl-outbound">
+                                <option value="OCC">OCC - Outbound Customer Comm</option>
+                                <option value="ODR">ODR - Outbound Document Request</option>
+                                <option value="OSD">OSD - Outbound Sign Your Docs</option>
+                                <option value="OEV">OEV - Outbound Employment Verify</option>
+                            </select>
+                    </div>
+                    <div class="container contact-ddl">
+                        <label for="contact-person-ddl" datalabel="contact-person-l">Contact Person:</label><br />
+                            <select id="contact-person-ddl-outbound" class="ddl-outbound">
+                                <option value="TB">TB - The Borrower</option>
+                                <option value="VM">VM - Voicmail</option>
+                                <option value="UN">UN - Not able to talk</option>
+                                <option value="INV">INV - Invalid Phone Number</option>
+                            </select>
+                    </div>
+                    <div class="container contact-ddl">
+                        <label for="call-number-ddl" datalabel="call-number-ddl">Call Number:</label>
+                            <select id="call-number-ddl-outbound" class="ddl-outbound">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                    </div>
+                    <div class="field is-grouped container button-container custom-notes-btn-container">
+                        <button class="button is-primary copy-btn" id="copy-btn-custom-notes" value="Copy">Copy</button>
+                        <button class="button is-warning reset-btn" id="reset-btn-custom-notes" value="Reset">Reset</button>
+                    </div>
+                </div>
+                
+              </div>
+              
+              
+              <!--
+              *************
+              CHAT PAGE 
+              *************
+              -->
+              <div id="chat-content" class="main-tab-content">
+                <div id="chat-tabs-wrapper" class="chat-tabs">
+                    <div class="chat-btn-wrapper">
+                      <button id="left-chat-tab-btn" class="chat-tab-links">Chat</button>
+                      <div id="left-chat-color-bar" class="chat-button-color-bar"></div>
+                    </div>
+                    <div class="chat-btn-wrapper">
+                        <button id="middle-chat-tab-btn" class="chat-tab-links">Chat</button>
+                        <div id="middle-chat-color-bar" class="chat-button-color-bar"></div>
+                    </div>
+                    <div class="chat-btn-wrapper">
+                      <button id="right-chat-tab-btn" class="chat-tab-links">Chat</button>
+                      <div id="right-chat-color-bar" class="chat-button-color-bar"></div>  
+                    </div>
+                </div>
+              
+              
+                <!--
+                *************
+                LEFT CHAT PAGE 
+                *************
+                -->
+                <div id="left-chat-content" class="chat-tab-content">
+                    <div class="container chat-tb chat-name-div" id="name-on-chat-div-left">
+                        <input class="chat-tb" id="name-tb-left" type=text placeholder="Name on Chat..." />
+                    </div>
+                    <div class="container">
+                        <h2 class="title is-4 title-verified">Verified?</h2>
+                    </div>
+                    <div class="container verify-checkbox-yes" id="verify-checkbox-yes-left">
+                        <input type="checkbox" class="checkbox reset-all-cb" id="verify-yes-left" name="verify-yes-checkbox" />
+                        <label for="verify-yes-left">Yes</label>
+                    </div>
+                    <div class="container verify-checkbox-no" id="verify-checkbox-no-left">
+                        <input type="checkbox" class="checkbox reset-all-cb" id="verify-no-left" name="verify-no-checkbox" />
+                        <label for="verify-no-left">No</label>
+                    </div>
+                    <div class="why-not-div" id="why-not-div-left">
+                        <div class="container why-not-title-div-left">
+                            <h2 class="title is-6 why-not-title-left">Why Not?</h2>
+                        </div>
+                        <div class="container">
+                            <input type="checkbox" class="checkbox reset-all-cb" id="general-question-cb-left">
+                            <label for="general-question-left">General Question</label>
+                        </div>
+                        <div class="container">
+                            <input type="checkbox" class="checkbox reset-all-cb" id="other-cb-left">
+                            <label for="general-question-left">Other</label>
+                        </div>
+                        <div class="container tb-div-other" id="tb-div-other-left">
+                            <input class="chat-tb" id="other-tb-left" type=text placeholder="Other..." />
+                        </div>
+                    </div>
+                    <p class="pick-color-text">Pick a Color</p>
+                    <select id='color-picker-left' class='color-picker-ddl'>
+                        <!-- Auto populated by JS -->
+                    </select>
+                    <div class="container question-container">
+                        <textarea rows="3" cols="35" id="question-chat-left" class="question-tb chat-tb" placeholder="Question..."></textarea>
+                    </div>
+                    <div class="container notes-container">
+                        <textarea rows="6" cols="35" id="notes-chat-left" class="notes-tb chat-tb" placeholder="Notes..."></textarea>
+                    </div>
+                    <div class="field is-grouped container button-container">
+                        <button class="button is-primary copy-btn" id="copy-btn-left" value="Copy">Copy</button>
+                        <button class="button is-warning reset-btn" id="reset-left" value="Reset">Reset</button>
+                    </div>
+                </div>
+                
+                <!--
+                ***************
+                MIDDLE CHAT PAGE 
+                ***************
+                -->
+                <div id="middle-chat-content" class="chat-tab-content">
+                    <div class="container chat-tb chat-name-div" id="name-on-chat-div-middle">
+                        <input class="chat-tb" id="name-tb-middle" type=text placeholder="Name on Chat..." />
+                    </div>
+                    <div class="container">
+                        <h2 class="title is-4 title-verified">Verified?</h2>
+                    </div>
+                    <div class="container verify-checkbox-yes" id="verify-checkbox-yes-middle">
+                        <input type="checkbox" class="checkbox reset-all-cb" id="verify-yes-middle" name="verify-yes-checkbox" />
+                        <label for="verify-yes-middle">Yes</label>
+                    </div>
+                    <div class="container verify-checkbox-no" id="verify-checkbox-no-middle">
+                        <input type="checkbox" class="checkbox reset-all-cb" id="verify-no-middle" name="verify-no-checkbox" />
+                        <label for="verify-no-middle">No</label>
+                    </div>
+                    <div class="why-not-div" id="why-not-div-middle">
+                        <div class="container why-not-title-div-middle">
+                            <h2 class="title is-6 why-not-title-middle">Why Not?</h2>
+                        </div>
+                        <div class="container">
+                            <input type="checkbox" class="checkbox reset-all-cb" id="general-question-cb-middle">
+                            <label for="general-question-middle">General Question</label>
+                        </div>
+                        <div class="container">
+                            <input type="checkbox" class="checkbox reset-all-cb" id="other-cb-middle">
+                            <label for="general-question-middle">Other</label>
+                        </div>
+                        <div class="container tb-div-other" id="tb-div-other-middle">
+                            <input class="chat-tb" id="other-tb-middle" type=text placeholder="Other..." />
+                        </div>
+                    </div>
+                    <p class="pick-color-text">Pick a Color</p>
+                    <select id='color-picker-middle' class='color-picker-ddl'>
+                        <!-- Auto populated by JS -->
+                    </select>
+                    <div class="container question-container">
+                        <textarea rows="3" cols="35" id="question-chat-middle" class="question-tb chat-tb" placeholder="Question..."></textarea>
+                    </div>
+                    <div class="container notes-container">
+                        <textarea rows="6" cols="35" id="notes-chat-middle" class="notes-tb chat-tb" placeholder="Notes..."></textarea>
+                    </div>
+                    <div class="field is-grouped container button-container">
+                        <button class="button is-primary copy-btn" id="copy-btn-middle" value="Copy">Copy</button>
+                        <button class="button is-warning reset-btn" id="reset-middle" value="Reset">Reset</button>
+                    </div>
+                </div>
+                
+                <!--
+                **************
+                RIGHT CHAT PAGE 
+                **************
+                -->
+                <div id="right-chat-content" class="chat-tab-content">
+                    <div class="container chat-tb chat-name-div" id="name-on-chat-div-right">
+                        <input class="chat-tb" id="name-tb-right" type=text placeholder="Name on Chat..." />
+                    </div>
+                    <div class="container">
+                        <h2 class="title is-4 title-verified">Verified?</h2>
+                    </div>
+                    <div class="container verify-checkbox-yes" id="verify-checkbox-yes-right">
+                        <input type="checkbox" class="checkbox reset-all-cb" id="verify-yes-right" name="verify-yes-checkbox" />
+                        <label for="verify-yes-right">Yes</label>
+                    </div>
+                    <div class="container verify-checkbox-no" id="verify-checkbox-no-right">
+                        <input type="checkbox" class="checkbox reset-all-cb" id="verify-no-right" name="verify-no-checkbox" />
+                        <label for="verify-no-right">No</label>
+                    </div>
+                    <div class="why-not-div" id="why-not-div-right">
+                        <div class="container why-not-title-div-right">
+                            <h2 class="title is-6 why-not-title-right">Why Not?</h2>
+                        </div>
+                        <div class="container">
+                            <input type="checkbox" class="checkbox reset-all-cb" id="general-question-cb-right">
+                            <label for="general-question-right">General Question</label>
+                        </div>
+                        <div class="container">
+                            <input type="checkbox" class="checkbox reset-all-cb" id="other-cb-right">
+                            <label for="general-question-right">Other</label>
+                        </div>
+                        <div class="container tb-div-other" id="tb-div-other-right">
+                            <input class="chat-tb" id="other-tb-right" type=text placeholder="Other..." />
+                        </div>
+                    </div>
+                    <p class="pick-color-text">Pick a Color</p>
+                    <select id='color-picker-right' class='color-picker-ddl'>
+                        <!-- Auto populated by JS -->
+                    </select>
+                    <div class="container question-container">
+                        <textarea rows="3" cols="35" id="question-chat-right" class="question-tb chat-tb" placeholder="Question..."></textarea>
+                    </div>
+                    <div class="container notes-container">
+                        <textarea rows="6" cols="35" id="notes-chat-right" class="notes-tb chat-tb" placeholder="Notes..."></textarea>
+                    </div>
+                    <div class="field is-grouped container button-container">
+                        <button class="button is-primary copy-btn" id="copy-btn-right" value="Copy">Copy</button>
+                        <button class="button is-warning reset-btn" id="reset-right" value="Reset">Reset</button>
+                    </div>
+                </div>
+                
+              </div>
+              
+              
+              
+            <div id="copy-snackbar">Copied!</div>
+            <div id="reset-snackbar">Reset!</div> 
+            <button class="button is-warning reset-btn" id="reset-all" value="Reset">Reset All</button>
+          </div><!-- End of column-for-width -->
+      </div><!-- End of column -->
+  </div><!-- End of columns is-centered -->
+</section>
+<textarea rows="1" cols="1" id="temp-textarea" class="clear-form" style="position:absolute; left:-1000px; top:-1000px;"></textarea>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://rawgit.com/QuiltedGnaves/sidebar/master/js/primary.js"></script>
+</html>

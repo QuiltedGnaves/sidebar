@@ -198,11 +198,13 @@ function resetChat(whichChat) {
     } else {
             if($("#verify-yes-" + whichChat).is(":checked")) {
             $("#verify-yes-" + whichChat).prop("checked", false);
+            $("#verify-checkbox-yes-" + whichChat).css("background-color", "");
         } else if($("#verify-no-" + whichChat).is(":checked")) {
             $("#verify-no-" + whichChat).prop("checked", false);
             $("#general-question-cb-" + whichChat).prop("checked", false);
             $("#other-cb-" + whichChat).prop("checked", false);
             $("#other-tb-" + whichChat).val("");
+            $("#verify-checkbox-no-" + whichChat).css("background-color", "");
         } else {
             
         }
@@ -217,6 +219,7 @@ function resetChat(whichChat) {
         $("#notes-chat-" + whichChat).height(110);
         $("#tb-div-other-" + whichChat).hide();
         $("#why-not-div-" + whichChat).hide();
+        $("#name-tb-" + whichChat).val("");
     }
     
     

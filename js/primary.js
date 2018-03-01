@@ -130,7 +130,7 @@ function formatChatNotes(whichChat) {
             wasVerified = "ICC-SC-TB: Not Verified";
         }
     } else {
-        wasVerified = "ICC-SC-TB: Bwr verified. ";
+        wasVerified = "ICC-SC-TB: Bwr not verified. ";
     }
     
     var formattedNotes =  wasVerified + "\n\n" + "Question: " + $question + "\n\n" + "Notes: " + $notes;

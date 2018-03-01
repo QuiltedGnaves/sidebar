@@ -129,6 +129,8 @@ function formatChatNotes(whichChat) {
         } else {
             wasVerified = "ICC-SC-TB: Not Verified";
         }
+    } else if($("#verify-yes-" + whichChat).is(":checked")){
+        wasVerified = "ICC-SC-TB: Bwr verified. ";
     } else {
         wasVerified = "ICC-SC-TB: Bwr not verified. ";
     }
